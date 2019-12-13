@@ -1,0 +1,24 @@
+.custbtn {
+    border-radius: 30px;
+    border: 1px solid #1F98A3;
+    background-color: #1F98A3;
+    padding:5px;
+    /* float: right; */
+    
+    width: 100px;
+    color:white;
+}
+
+.fa{
+    color: rgb(107, 167, 216);
+}
+.addtocart{
+    display: grid;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    h3,h6,p{
+        white-space: nowrap;
+    }
+  }

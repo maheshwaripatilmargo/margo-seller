@@ -1,0 +1,12 @@
+role_parent_id,role_name,role_description,isactive
+0,Direct Seller Role,These roles only applied for Direct Seller User,TRUE
+8,Event Organizer Role ,Event Organizer Role ,TRUE
+0,marGo BU Admin Role,Roles related to BU Units Admin level employee ,TRUE
+0,marGo Admin Role,marGo Admin Role,TRUE
+9,super admin,description,TRUE
+8,admin,desc,TRUE
+12,admin,desc,TRUE
+0,Direct Seller Role,These roles only applied for Direct Seller User,TRUE
+8,Event Organizer Role ,Event Organizer Role ,TRUE
+11,aaa,aaa,TRUE
+11,Superadmin,All access,TRUE

@@ -1,0 +1,9 @@
+per_parent_id,per_name,per_description,isactive
+0,Read,Read only permission,TRUE
+0,Write,Write / Add Permission,TRUE
+0,Edit,Edit /  Update Exiting Record,TRUE
+0,View All,View All permissions,TRUE
+0,Modify All,Modify / Update All Permission,TRUE
+0,Read,Read only permission,FALSE
+0,Write,Write / Add Permission,FALSE
+0,Delete,Delete record permission,TRUE

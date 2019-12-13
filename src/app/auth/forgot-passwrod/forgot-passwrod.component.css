@@ -1,0 +1,67 @@
+@media (min-width: 576px){
+    .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 66%;
+  }
+  }
+  .margin-left-5{
+    margin-left: 5px;
+  }
+  .formstyle{
+    border: 2px solid #ccc;
+   border-radius: 4px;
+  }
+  .formstyle:hover{
+    border :2px solid rgb(141, 71, 125)
+  }
+  .formstyle{
+    width:100%;
+    margin:auto;
+    /* margin-left: 126px; */
+    /* text-align: center; */
+  }
+  .card-link{
+    color: #2e9cab;
+  }
+  img {
+    width: 70%;
+  }
+  .custbtn {
+    border-radius: 30px;
+    border: 1px solid #009FAE;
+    background-color: #009FAE;
+    padding:5px;
+    /* float: right; */
+    
+    width: 100px;
+    color:white;
+  }
+  .login{
+    text-align: right;
+    padding-top: 1rem;
+  }
+  
+  /* .input{
+    
+  }
+  .alignment{
+    text-align: center !important;
+  } */
+  @media (min-width: 576px){
+    .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 66%;
+  }
+}
+ 
+  @media only screen and (max-width: 767px) {
+    img {
+      width: 100%;
+    }
+  }
+
+
+  
+  
+  
+  

@@ -1,0 +1,27 @@
+
+
+
+  <div *ngIf="loggedIn===true">
+    <h3 style="color: #1e9ff2;">user sucessflly login</h3>
+    {{user.id}}
+
+      <p>Full Name: {{user.firstName}} {{user.lastName}}</p> 
+   </div>
+
+
+              <div>
+                  <h3>Let's get social, how can we help?</h3>
+                    <button class="cbtn top"   [routerLink]="['/directseller/socialpost']"> <img class="customimg" src="assets/custom/images/14.png"> Schedule</button>
+                   <div class="top"><button class="cbtn"> <img class="customimg" src="assets/custom/images/15.png"> Create & Edit</button></div> 
+                    <div class="top"><button class="cbtn"> <img class="customimg" src="assets/custom/images/16.png"> View Calender</button></div>
+                    <div class="top"><button class="cbtn" (click)="signInWithFB()" *ngIf="loggedIn===false"> <img class="customimg" src="assets/custom/images/17.png">  Connect </button></div>
+                    <div class="top"><button class="cbtn" (click)="signOut()" *ngIf="loggedIn===true" > <img class="customimg" src="assets/custom/images/17.png"> disconnect</button></div>
+                </div>
+                
+
+    
+
+
+     
+      
+         
