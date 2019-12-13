@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Margo-web-html-2.0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1
@@ -72,3 +73,6 @@ add new route in module and refernce to new <componentname>
 copy html to component html
 
 
+=======
+# margo-seller
+>>>>>>> b06a8923425332357620626aab38c5f0dc65ddbf

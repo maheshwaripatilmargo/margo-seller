@@ -1,0 +1,31 @@
+module_parent_id,module_name,module_description,isactive
+0,User Module,All functionalities / Modules related to User Management,TRUE
+0,Clients Users Modules,Clients Users Modules,TRUE
+0,Clients BU Users Module,Clients BU Users Module,TRUE
+0,Clients BU Event Type Module,Clients BU Event Type Module,TRUE
+0,Clients BU Theme Module,Clients BU Theme Module,TRUE
+0,Clients BU Sub Journey Module,Clients BU Sub Journey Module,TRUE
+0,Clients BU Contacts Module,Clients BU Contacts Module,TRUE
+0,Contacts(Customer/Prospects) Module,Contacts(Customer/Prospects) Module,TRUE
+0,Journey Module,Journey Module,TRUE
+0,Products Module,Products Module,TRUE
+0,Themes Module,Themes Module,TRUE
+0,Team Member Module,Team Member Module,TRUE
+0,Post Module ,Post Module ,TRUE
+0,Events Module,Events Module,TRUE
+0,My Profile Module,My Profile Module,TRUE
+0,Invites Module,Invites Module,TRUE
+0,Campaign Module,Campaign Module,TRUE
+0,Dashboard Module,Dashboard Module,TRUE
+0,Knowledge Base Module,Knowledge Base Module,TRUE
+2,Master Module -1,All modules related to master data management from marGo employees,TRUE
+3,Company Module,Company related all Functionalities / Modules,TRUE
+9,Margo products Module,Margo products Module,TRUE
+21,Clients BU Module,Clients BU Module,TRUE
+0,User Module,All functionalities / Modules related to User Management,TRUE
+0,Clients Users Modules,Clients Users Modules,TRUE
+0,User Module,All functionalities / Modules related to User Management,TRUE
+0,Clients Users Modules,Clients Users Modules,TRUE
+3,Clients,Clients Modules,TRUE
+10,test-1,test-1,TRUE
+12,Reports Module,Reports Module,TRUE

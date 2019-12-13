@@ -10,7 +10,7 @@ import { MenuSettingsService } from '../../settings/menu-settings.service';
 import { isArray } from 'util';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { AppConstants } from 'src/app/_helpers/app.constants';
-// import { AdminoneService } from 'src/app/services/adminone/adminone.service';
+import { AdminoneService } from 'src/app/services/adminone/adminone.service';
 @Component({
 
   selector: 'app-verticalnav',
@@ -51,7 +51,7 @@ export class VerticalnavComponent implements OnInit {
     private _menuSettingsService: MenuSettingsService,
     private _renderer: Renderer2,
     private router: Router,
-    // private adminone: AdminoneService,
+    private adminone: AdminoneService,
     private ngZone: NgZone) {
     this._unsubscribeAll = new Subject();
     this._unsubscribeAllMenu = new Subject();
@@ -114,6 +114,7 @@ export class VerticalnavComponent implements OnInit {
              
             ]
           }
+       
         };
       });
     // TODO Patch to reset menu after login

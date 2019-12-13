@@ -19,4 +19,6 @@ import {
   declarations: [NgxDataTableComponent],
   exports: [NgxDataTableComponent],
 })
-export class NgxDataTableModule {}
+export class NgxDataTableModule {
+  tableData_id: any;
+}

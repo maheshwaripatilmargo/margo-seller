@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 import { Router } from '@angular/router';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarComponent, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { AppConstants } from 'src/app/_helpers/app.constants';
-
+import { RegisterService } from 'src/app/services/users/register.service';
 import { ConfirmationDialogService } from 'src/app/_utils/confirmation-dialog/confirmation-dialog.service';
 
 const docElmWithBrowsersFullScreenFunctions = document.documentElement as HTMLElement & {
@@ -60,7 +60,7 @@ export class VerticalComponent implements OnInit, AfterViewInit {
     private router: Router,
     private elementRef: ElementRef,
     public confirmationdialouge:ConfirmationDialogService,
-  
+    public registerService: RegisterService
   ) {
     this._unsubscribeAll = new Subject();
     this._unsubscribeAllMenu = new Subject();
@@ -95,14 +95,14 @@ export class VerticalComponent implements OnInit, AfterViewInit {
     if (localStorage.getItem('currentUser')) {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
-    // this.registerService.getUserProfileDetails().subscribe(data => {
-    //   if (data.status) {
-    //     this.status = true;
-    //     this.userProfileDetails = data.data;
-    //   }
-    // }, error => {
+    this.registerService.getUserProfileDetails().subscribe(data => {
+      if (data.status) {
+        this.status = true;
+        this.userProfileDetails = data.data;
+      }
+    }, error => {
 
-    // });
+    });
     // Subscribe to config changes
     this._themeSettingsService.config
       .pipe(takeUntil(this._unsubscribeAll))

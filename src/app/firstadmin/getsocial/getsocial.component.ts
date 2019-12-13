@@ -19,13 +19,19 @@ export class GetsocialComponent implements OnInit {
 
    signOut(): void {
      this.authService.signOut();
-     console.log("signout done")
+     
+    localStorage.removeItem('fbToken');
+    localStorage.clear();
+    sessionStorage.clear();
+    this.loggedIn = !true;
+     
    }
 
   ngOnInit() {
     if (localStorage.fbToken) {
       this.loggedIn = true;
     }
+    
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);

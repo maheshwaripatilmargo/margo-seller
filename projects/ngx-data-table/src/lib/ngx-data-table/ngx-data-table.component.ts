@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { NgxDataTableDataSource } from './ngx-data-table-datasource';
 import {
@@ -136,8 +136,12 @@ import {
   mat-paginator .mat-paginator-container {
     min-width: 1500px;
     background-color: #fff;
+<<<<<<< HEAD
   }
 
+=======
+  }    
+>>>>>>> b06a8923425332357620626aab38c5f0dc65ddbf
   @media only screen and (max-width: 600px) {
     .mat-row, .mat-header-row {min-width: 1424px;width: 100%;}
     .mat-paginator .mat-paginator-outer-container .mat-paginator-container{
@@ -187,6 +191,8 @@ export class NgxDataTableComponent {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   dataSource: NgxDataTableDataSource;
+  checked = true;
+  @Output() messageEvent = new EventEmitter<Object>();
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns: Array<string>;
@@ -199,6 +205,8 @@ export class NgxDataTableComponent {
    * @param row
    */
   toggleRow(row) {
+    console.log(this.expandedElement);
+
     if (this.expandedElement === row) {
       this.expandedElement = null;
     } else {
@@ -208,5 +216,17 @@ export class NgxDataTableComponent {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue;
+  }
+  receiveMessage(event) {
+    this.messageEvent.emit(event);
+  }
+  actionModule(event,id, actionName) {
+    event.preventDefault();
+    console.log(id,actionName);
+    let obj = {
+      _id: id,
+      name: actionName
+    }
+    this.messageEvent.emit(obj);
   }
 }

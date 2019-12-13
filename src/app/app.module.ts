@@ -9,7 +9,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
-import { AuthGuard } from './_guards/auth.guard';
+// import { AuthGuard } from './_guards/auth.guard';
 import { AlertComponent } from './_directives/alert.component';
 import { AlertService } from './_services/alert.service';
 import { AuthService } from './_services/auth.service';
@@ -79,7 +79,10 @@ import { QuicktextComponent } from './firstadmin/quicktext/quicktext.component';
 import { ReplunishmentComponent } from './firstadmin/replunishment/replunishment.component';
 import { CrosssellComponent } from './firstadmin/crosssell/crosssell.component';
 import { MydashboardComponent } from './firstadmin/mydashboard/mydashboard.component';
+
 import { FirstadminComponent } from './firstadmin/firstadmin.component';
+
+
 import { SocialpostComponent } from './firstadmin/getsocial/socialpost/socialpost.component';
 import { TypeofpostComponent } from './firstadmin/getsocial/typeofpost/typeofpost.component';
 import { EventhostComponent } from './firstadmin/getsocial/eventhost/eventhost.component';
@@ -88,8 +91,14 @@ import { HostedcampaignsComponent } from './firstadmin/getsocial/hostedcampaigns
 import { ResetpasswordComponent } from './auth/resetpassword/resetpassword.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ConfirmationDialogComponent } from './_utils/confirmation-dialog/confirmation-dialog.component';
-import { ConfirmationDialogService } from './_utils/confirmation-dialog/confirmation-dialog.service';
+import { ConfirmationDialogService } from './_utils/confirmation-dialog/confirmation-dialog.service'
+
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+
+import { from } from 'rxjs';;
+
+
 import { SetusernameComponent } from './auth/setusername/setusername.component';
 import { ImportFilesDialogComponent } from './_utils/import-files-dialog/import-files-dialog.component';
 import { ImportFilesDialogService } from './_utils/import-files-dialog/import-files-dialog.service';
@@ -109,8 +118,27 @@ import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'ang
 import {
   MatIconModule,
   MatButtonModule,
-  MatCardModule } from '@angular/material';
-
+  MatCardModule } from '@angular/material';;
+import { FacebookpostComponent } from './firstadmin/getsocial/facebookpost/facebookpost.component'
+;
+import { CustomfbpostComponent } from './firstadmin/getsocial/customfbpost/customfbpost.component'
+;
+import { ViewfbpostComponent } from './firstadmin/getsocial/viewfbpost/viewfbpost.component'
+;
+import { MsgsnipetaddsnipetComponent } from './firstadmin/getsocial/msgsnipetaddsnipet/msgsnipetaddsnipet.component'
+;
+import { MsgsnipetComponent } from './firstadmin/getsocial/msgsnipet/msgsnipet.component'
+;
+import { ScheduleComponent } from './firstadmin/getsocial/schedule/schedule.component'
+;
+import { FbcampaignnameComponent } from './firstadmin/getsocial/fbcampaignname/fbcampaignname.component';
+import { FbnotesComponent } from './firstadmin/getsocial/fbnotes/fbnotes.component';
+import { FbheadupComponent } from './firstadmin/getsocial/fbheadup/fbheadup.component';
+import { SelectpostComponent } from './firstadmin/getsocial/selectpost/selectpost.component';
+import { SchedulepostComponent } from './firstadmin/getsocial/schedulepost/schedulepost.component';
+import { UpcomingpostComponent } from './firstadmin/getsocial/upcomingpost/upcomingpost.component' ;
+import { LinktofbComponent } from './firstadmin/getsocial/linktofb/linktofb.component';
+import { SetupfbComponent } from './firstadmin/getsocial/setupfb/setupfb.component';
 const config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
@@ -190,29 +218,43 @@ export function provideConfig() {
         CommonComponent,
         HelpComponent,
         MarketComponent,
-        FirstadminComponent,
         GetsocialComponent,
         QuicktextComponent,
         ReplunishmentComponent,
         CrosssellComponent,
         MydashboardComponent,
        
+        FirstadminComponent,
+       
         SocialpostComponent,
         TypeofpostComponent,
         EventhostComponent,
         SearchforhostComponent,
         HostedcampaignsComponent,
-        
+       
         ResetpasswordComponent,
        
         ConfirmationDialogComponent,
         SetusernameComponent,
-        
-       
+        FacebookpostComponent,
+        CustomfbpostComponent,
+        ViewfbpostComponent
+,
+        MsgsnipetaddsnipetComponent
+,
+        MsgsnipetComponent ,
+        ScheduleComponent ,
+        FbcampaignnameComponent ,
+        FbnotesComponent ,
+        FbheadupComponent,
+        SetupfbComponent,
+        LinktofbComponent,
+        UpcomingpostComponent,
+        SchedulepostComponent,
         ImportFilesDialogComponent,
-        ],
+        SelectpostComponent],
     providers: [
-        AuthGuard,
+        // AuthGuard,
         AlertService,
         NavbarService,
         DataApiService,
@@ -231,7 +273,7 @@ export function provideConfig() {
     entryComponents: [
         BlockTemplateComponent,
         ConfirmationDialogComponent,
-        ImportFilesDialogComponent
+         ImportFilesDialogComponent
     ],
     bootstrap: [AppComponent],
     exports: [RouterModule]
