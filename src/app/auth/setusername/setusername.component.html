@@ -1,0 +1,33 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row mb-1">
+    </div>
+    <div class="content-body">
+      <section class="flexbox-container">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div class="col-md-4 col-10 box-shadow-0 p-0">
+            <div class="text-center col-12">
+              <img class="col-sm-12" src="../../assets/custom/images/margologo250.png" alt="branding logo">
+            </div>
+            <form class="form-horizontal text-center mt-1" [formGroup]="forgotForm">
+              <input type="text" formControlName="username" class="form-control formstyle"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="username"
+                placeholder="Enter Your Username">
+
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is Required</div>
+              </div>
+              {{message}} 
+              <div class="my_class text-center" [ngClass]="status ? 'displayblock' : 'displaynone'">
+                <button type="submit" class="custbtn mt-2" (click)="submitUserName()"> Submit </button>
+              </div>
+              <div class="my_class text-center" [ngClass]="status ? 'displaynone' :'displayblock' ">
+                <button type="button" class="custbtn mt-2" (click)="verifyUserName()"> Verify </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

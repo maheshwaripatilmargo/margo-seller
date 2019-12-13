@@ -1,0 +1,22 @@
+.cbtn{
+  text-align: left;
+  width:270px;
+  background-color:white;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.customimg{
+  margin-left: -5px;
+  height: 34px;
+  width: auto;
+  
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.top{
+  margin-top: 15px;
+}
+
+.h3{
+  display: inline !important;
+}

@@ -1,0 +1,44 @@
+
+
+<div *ngIf="loggedIn===true">
+  <h3 style="color: #6f42c1;">user sucessflly loginedin</h3>
+  <p>user ID:{{user.id}}</p> 
+  <p>Full Name: {{user.firstName}} {{user.lastName}}</p> 
+ </div>
+
+ <div class="row">
+    <div class="col-md-1 col-sm-2">
+   <h3><a routerLink="#" class="back">&lt;Back</a> </h3>
+   </div>
+   <div class="col-md-11 col-sm-10"></div>
+</div>
+
+    <div class="row">
+        <div class="col-md-1 col-sm-2"></div>
+      <div class="col-md-11 col-sm-10">
+     
+   <h3>Let's get social, how can we help?</h3>
+   <div class="top"><button class="cbtn top"   [routerLink]="['/directseller/socialpost']"> <img class="customimg" src="assets/custom/images/14.png"> Schedule</button></div>
+   <div class="top"><button class="cbtn"> <img class="customimg" src="assets/custom/images/15.png"> Create & Edit</button></div> 
+   <div class="top"><button class="cbtn"> <img class="customimg" src="assets/custom/images/16.png"> View Calender</button></div>
+   <div class="top"><button class="cbtn" (click)="signInWithFB()" *ngIf="loggedIn===false"> <img class="customimg" src="assets/custom/images/17.png">  Connect </button></div>
+   <div class="top"><button class="cbtn" (click)="signOut()" *ngIf="loggedIn===true" > <img class="customimg" src="assets/custom/images/17.png"> disconnect</button></div>
+  </div>
+</div>
+ 
+ 
+
+  
+
+
+        
+            
+             
+                
+
+    
+
+
+     
+      
+         
