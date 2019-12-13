@@ -140,7 +140,8 @@ import { SelectpostComponent } from './firstadmin/getsocial/selectpost/selectpos
 import { SchedulepostComponent } from './firstadmin/getsocial/schedulepost/schedulepost.component';
 import { UpcomingpostComponent } from './firstadmin/getsocial/upcomingpost/upcomingpost.component' ;
 import { LinktofbComponent } from './firstadmin/getsocial/linktofb/linktofb.component';
-import { SetupfbComponent } from './firstadmin/getsocial/setupfb/setupfb.component';
+import { SetupfbComponent } from './firstadmin/getsocial/setupfb/setupfb.component';;
+import { SeriespostComponent } from './firstadmin/getsocial/seriespost/seriespost.component'
 const config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
@@ -254,7 +255,8 @@ export function provideConfig() {
         UpcomingpostComponent,
         SchedulepostComponent,
         ImportFilesDialogComponent,
-        SelectpostComponent],
+        SelectpostComponent,
+        SeriespostComponent],
     providers: [
         AuthGuard,
         AlertService,

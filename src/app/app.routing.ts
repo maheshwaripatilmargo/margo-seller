@@ -41,6 +41,7 @@ import { SchedulepostComponent } from './firstadmin/getsocial/schedulepost/sched
 import { UpcomingpostComponent } from './firstadmin/getsocial/upcomingpost/upcomingpost.component';
 import { LinktofbComponent } from './firstadmin/getsocial/linktofb/linktofb.component';
 import { SetupfbComponent } from './firstadmin/getsocial/setupfb/setupfb.component';
+import { SeriespostComponent } from './firstadmin/getsocial/seriespost/seriespost.component';
 // import { AddnewrolesComponent } from './secondadmin/master/roles/addnewroles/addnewroles.component';
 
 const appRoutes: Routes = [
@@ -90,6 +91,7 @@ const appRoutes: Routes = [
           {path:"viewfbpost", component:ViewfbpostComponent},
           {path:"msgsnipetaddsnipet", component:MsgsnipetaddsnipetComponent},
           {path:"msgsnipet", component:MsgsnipetComponent},
+          {path:"seriespost", component:SeriespostComponent},
 
           {path:"fbcampaignname", component:FbcampaignnameComponent},
           {path:"fbnotes", component:FbnotesComponent},
