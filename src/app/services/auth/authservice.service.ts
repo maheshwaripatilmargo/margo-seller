@@ -19,7 +19,7 @@ export class AuthserviceService {
 
 
   constructor(private http: HttpClient, public baseService: BaseserviceService) {
-    this.baseUrl = baseService.baseUrl1 + 'auth/';
+    this.baseUrl = baseService.baseUrl1 + 'auth/ds/';
   }
   checkLogin2() {
     return this.http.get<any>(this.baseUrl + "get-events-list")
@@ -63,7 +63,7 @@ export class AuthserviceService {
     if (token) {
       httpOptions.headers = httpOptions.headers.set('x-auth', token);
     }
-    return this.http.post<any>(`${this.baseService.baseUrl1}user/checkUserNameExists`, body, httpOptions)
+    return this.http.post<any>(`${this.baseService.baseUrl1}api/ds/checkUserNameExists`, body, httpOptions)
       .pipe(catchError(this.handleError));
   }
 

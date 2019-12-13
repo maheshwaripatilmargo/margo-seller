@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/_services/alert.service';
 import { ToastrService } from 'ngx-toastr';
-import { RegisterService } from 'src/app/services/users/register.service';
+// import { RegisterService } from 'src/app/services/users/register.service';
 import { AuthserviceService } from 'src/app/services/auth/authservice.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class SetusernameComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     public router: Router,
-    private registerService: RegisterService,
+    // private registerService: RegisterService,
     private authserviceService: AuthserviceService,
     private alertService: AlertService,
     public toastrService: ToastrService) { }

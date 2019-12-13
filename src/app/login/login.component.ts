@@ -5,7 +5,7 @@ import { first } from 'rxjs/operators';
 import { AuthService } from '../_services/auth.service';
 import { AlertService } from '../_services/alert.service';
 import { AuthserviceService } from '../services/auth/authservice.service';
-import { AdminoneService } from '../services/adminone/adminone.service';
+// import { AdminoneService } from '../services/adminone/adminone.service';
 import { ToastrService } from 'ngx-toastr';
 @Component({
     templateUrl: 'login.component.html',
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         private alertService: AlertService,
         public authService: AuthService,
         private authenticationService: AuthserviceService,
-        private adminService: AdminoneService,
+        // private adminService: AdminoneService,
         public toastrService: ToastrService
     ) { }
 

@@ -1,14 +1,13 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
 import { PublicLayoutComponent } from './_layout/public-layout/public-layout.component';
 import { PrivateLayoutComponent } from './_layout/private-layout/private-layout.component';
-import { AuthGuard } from './_guards/auth.guard';
+// import { AuthGuard } from './_guards/auth.guard';
 import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
 import { ChangelogComponent } from './changelog/changelog.component';
 import { ForgotUserComponent } from './auth/forgot-user/forgot-user.component';
 import { ForgotPasswrodComponent } from './auth/forgot-passwrod/forgot-passwrod.component';
 import { CommonComponent } from './common/common.component';
-
 import { HelpComponent } from './firstadmin/help/help.component';
 import { MarketComponent } from './firstadmin/market/market.component';
 import { GetsocialComponent } from './firstadmin/getsocial/getsocial.component'
@@ -24,9 +23,9 @@ import { TypeofpostComponent } from './firstadmin/getsocial/typeofpost/typeofpos
 import { EventhostComponent } from './firstadmin/getsocial/eventhost/eventhost.component';
 import { SearchforhostComponent } from './firstadmin/getsocial/searchforhost/searchforhost.component';
 import { HostedcampaignsComponent } from './firstadmin/getsocial/hostedcampaigns/hostedcampaigns.component';
-
 import { ResetpasswordComponent } from './auth/resetpassword/resetpassword.component';
 import { SetusernameComponent } from './auth/setusername/setusername.component';
+
 import { FacebookpostComponent } from './firstadmin/getsocial/facebookpost/facebookpost.component';
 import { CustomfbpostComponent } from './firstadmin/getsocial/customfbpost/customfbpost.component';
 import { ViewfbpostComponent } from './firstadmin/getsocial/viewfbpost/viewfbpost.component';
@@ -68,19 +67,19 @@ const appRoutes: Routes = [
         path: 'logout', component: LoginComponent,
         //  canActivate: [AuthGuard] 
       },
-      { path: 'changelog', component: ChangelogComponent, canActivate: [AuthGuard] },
+      { path: 'changelog', component: ChangelogComponent,  },
 
       // { path: 'common', component: CommonComponent },
       {
         path: "directseller", component: FirstadminComponent,
-        // canActivate: [AuthGuard] ,
+        //  ,
         children: [
-          { path: "help", component: HelpComponent, canActivate: [AuthGuard] },
+          { path: "help", component: HelpComponent,  },
 
           { path: 'market', component: MarketComponent },
           //get social layout
 
-          { path: "getsocial", component: GetsocialComponent ,canActivate: [AuthGuard]},
+          { path: "getsocial", component: GetsocialComponent ,},
           { path: "socialpost", component: SocialpostComponent },
           { path: "typeofpost", component: TypeofpostComponent },
           { path: "eventhost", component: EventhostComponent },

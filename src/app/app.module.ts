@@ -9,7 +9,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
-import { AuthGuard } from './_guards/auth.guard';
+// import { AuthGuard } from './_guards/auth.guard';
 import { AlertComponent } from './_directives/alert.component';
 import { AlertService } from './_services/alert.service';
 import { AuthService } from './_services/auth.service';
@@ -103,9 +103,7 @@ import { SetusernameComponent } from './auth/setusername/setusername.component';
 import { ImportFilesDialogComponent } from './_utils/import-files-dialog/import-files-dialog.component';
 import { ImportFilesDialogService } from './_utils/import-files-dialog/import-files-dialog.service';
 import { TreeModule } from 'angular-tree-component';
-
 import { NgxDataTableModule } from 'projects/ngx-data-table/src/public_api';
-
 
 
 
@@ -258,7 +256,7 @@ export function provideConfig() {
         SelectpostComponent,
         SeriespostComponent],
     providers: [
-        AuthGuard,
+        // AuthGuard,
         AlertService,
         NavbarService,
         DataApiService,

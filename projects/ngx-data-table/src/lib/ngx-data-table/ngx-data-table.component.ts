@@ -136,7 +136,12 @@ import {
   mat-paginator .mat-paginator-container {
     min-width: 1500px;
     background-color: #fff;
+<<<<<<< HEAD
+  }
+
+=======
   }    
+>>>>>>> b06a8923425332357620626aab38c5f0dc65ddbf
   @media only screen and (max-width: 600px) {
     .mat-row, .mat-header-row {min-width: 1424px;width: 100%;}
     .mat-paginator .mat-paginator-outer-container .mat-paginator-container{
