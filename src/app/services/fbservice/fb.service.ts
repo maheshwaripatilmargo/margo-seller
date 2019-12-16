@@ -15,18 +15,17 @@ export class FbService {
     this.baseUrl = baseService.baseUrl1 + 'api/fb/';
   }
   
-  addingFbUsers(value){    
+  addingFbUsers(value,token){    
     var body = value;
-    return this.http.post<any>(this.baseUrl + "account", body, this.httpHeadersOptions())
-      .pipe(catchError(this.handleError));
-  }
-   private httpHeadersOptions() {
-    let token = localStorage.getItem("accesToken");
-    let httpOptions = this.baseService.httpHeadersOptions()
+    let httpOptions = this.httpHeadersOptions()
     if (token) {
       httpOptions.headers = httpOptions.headers.set('x-auth', token);
     }
-    return httpOptions;
+    return this.http.post<any>(this.baseUrl + "account", body, httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+   private httpHeadersOptions() {
+    return this.baseService.httpHeadersOptions();
   }
   //tohandle the error
   private handleError(error: HttpErrorResponse) {
