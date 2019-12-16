@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, FacebookLoginProvider, SocialUser } from 'angularx-social-login';
+import { FbService } from 'src/app/services/fbservice/fb.service';
+// import{fbservice} from 'services\fbservice\fb.service.ts';
+
 
 @Component({
   selector: 'app-getsocial',
@@ -11,12 +14,15 @@ export class GetsocialComponent implements OnInit {
   user: SocialUser;
   loggedIn: boolean;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService ,public fb:FbService ) { }
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
     console.log(FacebookLoginProvider.PROVIDER_ID);
+  
+// this.fb.addingFbUsers(value).
     
+
 
 
   }
