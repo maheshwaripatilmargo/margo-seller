@@ -53,7 +53,7 @@ console.log(token);
           fbprofilepic: user.photoUrl,
           fbauth: user.authToken
         }
-        this.fb.addingFbUsers(obj,token).subscribe(data=>{
+        this.fb.addingFbUsers(obj).subscribe(data=>{
           console.log(data);
       },err=>{
         console.log(err);
