@@ -80,6 +80,7 @@ export class LoginComponent implements OnInit {
                 this.toastrService.error(error);
             }, 1000);
         });
+    }
         // this.authService.doLogin(value)
         //     .then(res => {
         //         this.setUserInStorage(res);
@@ -93,7 +94,7 @@ export class LoginComponent implements OnInit {
         //         this.submitted = false;
 
         //     });
-    }
+    
 
     setUserInStorage(res) {
         if (res.user) {
