@@ -21,7 +21,12 @@ export class FbService {
       .pipe(catchError(this.handleError));
   }
    private httpHeadersOptions() {
-    return this.baseService.httpHeadersOptions();
+    let token = localStorage.getItem("accesToken");
+    let httpOptions = this.baseService.httpHeadersOptions()
+    if (token) {
+      httpOptions.headers = httpOptions.headers.set('x-auth', token);
+    }
+    return httpOptions;
   }
   //tohandle the error
   private handleError(error: HttpErrorResponse) {

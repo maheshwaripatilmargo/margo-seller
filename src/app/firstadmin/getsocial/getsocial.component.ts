@@ -18,8 +18,6 @@ export class GetsocialComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
-
-
   }
 
   signOut(): void {
@@ -31,7 +29,6 @@ export class GetsocialComponent implements OnInit {
     sessionStorage.clear();
     this.loggedIn = !true;
     this.authService.signOut();
-
   }
 
   ngOnInit() {
