@@ -59,11 +59,12 @@ export class GetsocialComponent implements OnInit {
   }
   signOut(): void {
     localStorage.clear();
-
     sessionStorage.clear();
     this.loggedIn = false;
     this.authService.signOut();
+    
     localStorage.removeItem('fbToken');
+    localStorage.removeItem('authToken');
 
   }
 }
