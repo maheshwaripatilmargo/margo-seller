@@ -32,6 +32,7 @@ export class GetsocialComponent implements OnInit {
 
     localStorage.removeItem('fbToken');
     localStorage.clear();
+   
     sessionStorage.clear();
     this.loggedIn = !true;
     this.authService.signOut();
@@ -48,21 +49,22 @@ export class GetsocialComponent implements OnInit {
       this.loggedIn = (user != null);
       console.log(this.user.facebook.picture.data.url);
       console.log("@@@", this.user);
-      let obj = {
-        fbid: user.id,
-        fbusername: user.firstName,
-        fbprofilepic: user.photoUrl,
-        fbauth: user.authToken
-      }
-      this.fb.addingFbUsers(obj).subscribe(data=>{
-        console.log(data);
-        
+      if(this.loggedIn){
+        let obj = {
+          fbid: user.id,
+          fbusername: user.name,
+          fbprofilepic: user.photoUrl,
+          fbauth: user.authToken
+        }
+        this.fb.addingFbUsers(obj).subscribe(data=>{
+          console.log(data);
       },err=>{
         console.log(err);
         
       })
 
-    });
+    }}
+    );
   }
-
 }
+  
