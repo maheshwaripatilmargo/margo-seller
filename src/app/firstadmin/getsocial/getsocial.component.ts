@@ -17,12 +17,7 @@ export class GetsocialComponent implements OnInit {
   constructor(private authService: AuthService, public fb: FbService) { }
 
   signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-
-
-
-
-
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
 
 
   }
@@ -43,6 +38,8 @@ export class GetsocialComponent implements OnInit {
     if (localStorage.fbToken) {
       this.loggedIn = true;
     }
+let token = localStorage.getItem("accesToken")
+console.log(token);
 
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -56,7 +53,7 @@ export class GetsocialComponent implements OnInit {
           fbprofilepic: user.photoUrl,
           fbauth: user.authToken
         }
-        this.fb.addingFbUsers(obj).subscribe(data=>{
+        this.fb.addingFbUsers(obj,token).subscribe(data=>{
           console.log(data);
       },err=>{
         console.log(err);

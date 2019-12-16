@@ -15,9 +15,9 @@ export class FbService {
     this.baseUrl = baseService.baseUrl1 + 'api/fb/';
   }
   
-  addingFbUsers(value){    
+  addingFbUsers(value,token){    
     var body = value;
-    return this.http.post<any>(this.baseUrl + "account", body, this.httpHeadersOptions())
+    return this.http.post<any>(this.baseUrl + "account", body + token, this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
   }
    private httpHeadersOptions() {
