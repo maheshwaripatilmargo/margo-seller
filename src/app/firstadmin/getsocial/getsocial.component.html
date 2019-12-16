@@ -2,6 +2,7 @@
 <div class="container">
 <div *ngIf="loggedIn===true">
   <img [src]="user.photoUrl" alt="My Facebook Photo">
+  {{user |json}}
   <p>{{user.firstName}} {{user.lastName}}</p> 
  </div>
 

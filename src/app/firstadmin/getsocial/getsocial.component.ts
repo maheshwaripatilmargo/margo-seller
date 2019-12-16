@@ -18,9 +18,9 @@ export class GetsocialComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-    console.log(FacebookLoginProvider.PROVIDER_ID);
+    
   
-// this.fb.addingFbUsers(value).
+
     
 
 
@@ -47,6 +47,14 @@ export class GetsocialComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
       console.log(this.user.facebook.picture.data.url);
+      let obj={
+        // user_id:14,
+	// fbid:
+	fbusername:user.firstName,
+	fbprofilepic:user.photoUrl,
+	// fbauth:
+      }
+      this.fb.addingFbUsers(obj).subscribe
      
     });
   }
