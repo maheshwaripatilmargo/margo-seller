@@ -1,9 +1,7 @@
 
 <div class="container">
 <div *ngIf="loggedIn===true">
-  <h3 style="color: #6f42c1;">user sucessflly loginedin</h3>
   <img [src]="user.photoUrl" alt="My Facebook Photo">
-  <p>{{user.id}}</p> 
   <p>{{user.firstName}} {{user.lastName}}</p> 
  </div>
 

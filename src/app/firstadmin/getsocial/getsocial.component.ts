@@ -15,6 +15,10 @@ export class GetsocialComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    console.log(FacebookLoginProvider.PROVIDER_ID);
+    
+
+
   }
 
    signOut(): void {
