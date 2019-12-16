@@ -20,8 +20,9 @@ export class GetsocialComponent implements OnInit {
 
   
 
-  ngOnInit() {
+   ngOnInit() {
     if (localStorage.fbToken) {
+
       this.loggedIn = true;
     }
     let token = localStorage.getItem("accesToken")
@@ -29,7 +30,7 @@ export class GetsocialComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
       console.log(this.user.facebook.picture.data.url);
-      console.log("@@@", this.user);
+      // console.log("@@@", this.user);
       if (this.loggedIn) {
         let obj = {
           fbid: user.id,
@@ -52,15 +53,18 @@ export class GetsocialComponent implements OnInit {
       }
     }
     );
-  }
+   }
   signInWithFB(): void {
 
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+    // localStorage.setItem('fbToken', this);
   }
   signOut(): void {
+    console.log("haii");
+    
     localStorage.clear();
     sessionStorage.clear();
-    this.loggedIn = false;
+    // this.loggedIn = false;
     this.authService.signOut();
     
     localStorage.removeItem('fbToken');

@@ -63,7 +63,9 @@ export class LoginComponent implements OnInit {
 
         this.authenticationService.checkLogin(value).subscribe(data => {
             if (data.status) {
-                localStorage.setItem("accesToken", data.token)
+                localStorage.setItem("accesToken", data.token);
+                console.log('SET');
+                
                 setTimeout(() => {
                     this.toastrService.success(data.message)
                 }, 1000);
