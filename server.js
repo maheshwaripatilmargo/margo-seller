@@ -7,14 +7,15 @@ const app = express();
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/'));
-app.get('/clear-cookies', function(req,res) {
+// app.get('/clear-cookies', function(req,res) {
     
-    Cookies.remove('c_user');
-    Cookies.remove('fbsr_246222385503381');
-    Cookies.remove('fbm_246222385503381');
-    Cookies.remove('fr');
-    res.redirect('/directseller/getsocial');
-});
+//     Cookies.remove('c_user');
+//     Cookies.remove('fbsr_246222385503381');
+//     Cookies.remove('fbm_246222385503381');
+//     Cookies.remove('fr');
+//     res.redirect({
+// '/directseller/getsocial');
+// });
 
 app.get('/*', function(req,res) {
     
