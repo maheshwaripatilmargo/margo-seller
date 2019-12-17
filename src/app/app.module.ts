@@ -139,7 +139,8 @@ import { SchedulepostComponent } from './firstadmin/getsocial/schedulepost/sched
 import { UpcomingpostComponent } from './firstadmin/getsocial/upcomingpost/upcomingpost.component' ;
 import { LinktofbComponent } from './firstadmin/getsocial/linktofb/linktofb.component';
 import { SetupfbComponent } from './firstadmin/getsocial/setupfb/setupfb.component';;
-import { SeriespostComponent } from './firstadmin/getsocial/seriespost/seriespost.component'
+import { SeriespostComponent } from './firstadmin/getsocial/seriespost/seriespost.component';
+import { CookieService } from 'ngx-cookie-service';
 const config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
@@ -261,6 +262,7 @@ export function provideConfig() {
         NavbarService,
         DataApiService,
         AuthService,
+        CookieService,
        {provide: AuthServiceConfig,
         useFactory: provideConfig},
         {
