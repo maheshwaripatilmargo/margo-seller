@@ -38,7 +38,9 @@ export class GetsocialComponent implements OnInit {
     );
    }
   signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    console.log("Sigin In");
+    
     // localStorage.setItem('fbToken', this);
     let token = localStorage.getItem("accesToken")
 
@@ -50,7 +52,7 @@ export class GetsocialComponent implements OnInit {
         fbauth: this.user.authToken
       }
       this.fb.addingFbUsers(obj, token).subscribe(data => {
-        console.log(data);
+        console.log('ADDing users',data);
       }, err => {
         console.log(err);
 
@@ -72,7 +74,9 @@ export class GetsocialComponent implements OnInit {
     
     // this.loggedIn = false;
     this.authService.signOut();
-    this.cookieService.deleteAll('authtoken');
+    this.cookieService.deleteAll();
+    console.log('DEL COOK',this.cookieService.deleteAll());
+    
     localStorage.removeItem('fbToken');
     localStorage.removeItem('authToken');
 
