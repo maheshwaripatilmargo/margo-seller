@@ -16,7 +16,7 @@ export class GetsocialComponent implements OnInit {
   loggedIn: boolean;
   cookieValue = 'UNKNOWN';
 
-  constructor(private authService: AuthService, public fb: FbService,private cookieService: CookieSedervice) { }
+  constructor(private authService: AuthService, public fb: FbService,private cookieService: CookieService) { }
 
   
 
