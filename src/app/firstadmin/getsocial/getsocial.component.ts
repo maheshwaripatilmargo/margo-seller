@@ -59,7 +59,7 @@ export class GetsocialComponent implements OnInit {
    
   }
   signOut(): void {
-    console.log("haii");
+    console.log("haii",this.cookieService.deleteAll());
     this.cookieService.delete;
 
     this.cookieService.deleteAll();
