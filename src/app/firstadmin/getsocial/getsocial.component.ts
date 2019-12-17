@@ -26,13 +26,15 @@ export class GetsocialComponent implements OnInit {
    
    }
   signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+    
+
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
     let token = localStorage.getItem("accesToken")
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
       console.log(this.user.facebook.picture.data.url);
-      // console.log("@@@", this.user);
+
       if (this.loggedIn) {
         let obj = {
           fbid: user.id,
@@ -40,10 +42,7 @@ export class GetsocialComponent implements OnInit {
           fbprofilepic: user.photoUrl,
           fbauth: user.authToken
         }
-        console.log(user.id);
-        console.log(user.name);
-        console.log(user.photoUrl);
-        console.log(user.authToken);
+       
         
         this.fb.addingFbUsers(obj, token).subscribe(data => {
           console.log(data);
@@ -53,9 +52,8 @@ export class GetsocialComponent implements OnInit {
         })
 
       }
-    });
-
-   
+    }
+    );
    
   }
   signOut(): void {
