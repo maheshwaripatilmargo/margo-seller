@@ -18,10 +18,6 @@ export class GetsocialComponent implements OnInit {
 
   constructor(private authService: AuthService, public fb: FbService,private cookieService: CookieService) { }
 
-  
-
-  
-
    ngOnInit() {
     if (localStorage.fbToken) {
 
@@ -60,13 +56,11 @@ export class GetsocialComponent implements OnInit {
     
 
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
-    // localStorage.setItem('fbToken', this);
+   
   }
   signOut(): void {
     console.log("haii");
-    // CookieService.deleteAll();
-    // CookieService.cle();
-    // deleteAll(path?:string,domain?:string):void;
+  
     
     
     this.cookieService.deleteAll();
@@ -74,7 +68,7 @@ export class GetsocialComponent implements OnInit {
     sessionStorage.clear();
   
     
-    // this.loggedIn = false;
+     this.loggedIn = false;
     this.authService.signOut();
     
     localStorage.removeItem('fbToken');
