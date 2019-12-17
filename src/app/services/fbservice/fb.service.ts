@@ -24,6 +24,36 @@ export class FbService {
     return this.http.post<any>(this.baseUrl + "account", body, httpOptions)
       .pipe(catchError(this.handleError));
   }
+
+
+  getCampaign() {
+    var body = {};
+    return this.http.get<any>(this.baseUrl + "campaign/100/0", this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+  getPostManagementData() {
+    var body = {};
+    return this.http.get<any>(this.baseUrl + "post/100/0", this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+  getCategoryData() {
+    var body = {};
+    return this.http.get<any>(this.baseUrl + "postCategory/100/0", this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+
+ getMessageData() {
+    var body = {};
+    return this.http.get<any>(this.baseUrl + "message/100/0", this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+
+
+  
+
+
+
+
    private httpHeadersOptions() {
     return this.baseService.httpHeadersOptions();
   }

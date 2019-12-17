@@ -23,6 +23,9 @@ export class GetsocialComponent implements OnInit {
 
       this.loggedIn = true;
     }
+   
+   }
+  signInWithFB(): void {
     let token = localStorage.getItem("accesToken")
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -49,11 +52,7 @@ export class GetsocialComponent implements OnInit {
         })
 
       }
-    }
-    );
-   }
-  signInWithFB(): void {
-    
+    });
 
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
    
