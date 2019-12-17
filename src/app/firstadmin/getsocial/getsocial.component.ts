@@ -16,7 +16,11 @@ export class GetsocialComponent implements OnInit {
   loggedIn: boolean;
   cookieValue = 'UNKNOWN';
 
-  constructor(private authService: AuthService, private fb: FbService,private cookieService: CookieService) { }
+  constructor(private authService: AuthService, public fb: FbService,private cookieService: CookieSedervice) { }
+
+  
+
+  
 
    ngOnInit() {
     if (localStorage.fbToken) {
@@ -24,50 +28,51 @@ export class GetsocialComponent implements OnInit {
       this.loggedIn = true;
     }
    
-   }
-  signInWithFB(): void {
-    
-
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-    let token = localStorage.getItem("accesToken")
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
       console.log(this.user.facebook.picture.data.url);
-
-      if (this.loggedIn) {
-        let obj = {
-          fbid: user.id,
-          fbusername: user.name,
-          fbprofilepic: user.photoUrl,
-          fbauth: user.authToken
-        }
-       
-        
-        this.fb.addingFbUsers(obj, token).subscribe(data => {
-          console.log(data);
-        }, err => {
-          console.log(err);
-
-        })
-
-      }
+      // console.log("@@@", this.user);
+     
     }
     );
-   
+   }
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+    // localStorage.setItem('fbToken', this);
+    let token = localStorage.getItem("accesToken")
+
+    if (this.loggedIn) {
+      let obj = {
+        fbid: this.user.id,
+        fbusername: this.user.name,
+        fbprofilepic: this.user.photoUrl,
+        fbauth: this.user.authToken
+      }
+      this.fb.addingFbUsers(obj, token).subscribe(data => {
+        console.log(data);
+      }, err => {
+        console.log(err);
+
+      })
+
+    }
   }
   signOut(): void {
-    console.log("haii",this.cookieService.deleteAll());
-    this.cookieService.delete;
-
-    this.cookieService.deleteAll();
+    console.log("haii");
+     
+    // CookieService.cle();
+    // deleteAll(path?:string,domain?:string):void;
+    
+    
+  
     localStorage.clear();
     sessionStorage.clear();
   
     
-     this.loggedIn = false;
+    // this.loggedIn = false;
     this.authService.signOut();
-    
+    this.cookieService.deleteAll('authtoken');
     localStorage.removeItem('fbToken');
     localStorage.removeItem('authToken');
 
