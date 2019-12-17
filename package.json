@@ -46,6 +46,7 @@
     "express": "^4.17.1",
     "firebaseui": "^3.5.2",
     "install": "^0.13.0",
+    "js-cookie": "^2.2.1",
     "lodash-es": "^4.17.11",
     "ng2-search-filter": "^0.5.1",
     "ngx-cookie-service": "^2.2.0",
