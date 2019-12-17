@@ -60,17 +60,18 @@ export class GetsocialComponent implements OnInit {
   }
   signOut(): void {
     console.log("haii");
-    this.loggedIn = false;
+    this.cookieService.delete;
+
+    this.cookieService.deleteAll();
+    localStorage.clear();
+    sessionStorage.clear();
+  
+    
+     this.loggedIn = false;
     this.authService.signOut();
     
     localStorage.removeItem('fbToken');
     localStorage.removeItem('authToken');
-
-
-    window.location.replace('/clear-cookies');
-
-    // this.cookieService
-    // /clear-cookies
 
   }
 }
