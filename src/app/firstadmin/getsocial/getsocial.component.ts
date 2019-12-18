@@ -27,15 +27,6 @@ export class GetsocialComponent implements OnInit {
 
       this.loggedIn = true;
     }
-   
-  
-   }
-  signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-    console.log("Sigin In");
-    
-    // localStorage.setItem('fbToken', this);
-    let token = localStorage.getItem("accesToken")
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
@@ -44,6 +35,14 @@ export class GetsocialComponent implements OnInit {
      
     }
     );
+  }
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    console.log("Sigin In");
+    
+    // localStorage.setItem('fbToken', this);
+    let token = localStorage.getItem("accesToken")
+ 
 
     if (this.loggedIn) {
       let obj = {
