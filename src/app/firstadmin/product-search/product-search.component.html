@@ -1,0 +1,61 @@
+<div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h2>Find and Select a Product for Deanna:</h2>
+          <div class="card">
+            <div class="card-header">                
+                <br/>
+                <div class="form-group">
+                  <input type="text" value="Body W" class="form-control input cursor-pointer" />
+                </div>
+            </div>
+            <div class="card-content">
+              <div class="card-body">
+                  <h4>RESULTS</h4>
+                  <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a (click)="showProductInformation(productInformation)">Body Wash</a></li>
+                        <li class="list-group-item"><a (click)="showProductInformation(productInformation)">Body Wash</a></li>
+                        <li class="list-group-item"><a (click)="showProductInformation(productInformation)">Body Gel</a></li>
+                        <li class="list-group-item"><a (click)="showProductInformation(productInformation)">Body Scrub</a></li>              
+                    </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+                    <span class="text-muted" routerLink="/directseller/productsList">Show page View</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 margo-border-left">
+          <h3>Recent Items:</h3>      
+              <p><a [routerLink]="['/directseller/productsList']">Body Lotion</a></p>
+              <p><a [routerLink]="['/directseller/productsList']">Hand Cream</a></p>
+              <p><a [routerLink]="['/directseller/productsList']">Body Gel</a></p>      
+        </div>
+      
+      </div>
+
+      <ng-template #productInformation let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Quick View</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <img src="" />
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h4><b>G & H Nourish  Body Wash</b></h4>
+                    <span>Item: # 123434</span>
+                    <div class="top">
+                        <h5><b>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </b></h5>
+                        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-margo-action btn-round" routerLink="/directseller/productsList" (click)="modal.dismiss('Cross click')">Select</button>
+          </div>
+        </ng-template>

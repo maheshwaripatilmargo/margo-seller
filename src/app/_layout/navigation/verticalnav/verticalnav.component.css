@@ -1,0 +1,38 @@
+.main-menu.menu-dark .navigation > li > a {
+    padding: 0px 36px 0px 0px;
+    /* display: flex; */
+    /* color: #000; */
+}
+
+.main-menu.menu-dark .navigation img {
+    padding-right: 5px;
+}
+.main-menu.menu-dark .navigation > li {
+    /* display: flex !important; */
+    margin: 10px 0;
+    background-color: #e7e7e7;
+}
+.main-menu.menu-dark .navigation > li:first-child {
+    margin: 10px 0;
+}
+/* .main-menu.menu-dark .navigation > ul {
+    background: #a1a6a9;
+} */
+
+.main-menu.menu-dark .navigation {
+    background: #d8dcdf;
+}
+.main-menu.menu-dark .navigation li a{
+    background-color: #f2f2f2;
+    color:#747575;
+}
+ .main-menu.menu-dark .navigation > li.active > a  {
+  background-color: white;
+  color:black;
+}
+/* .main-menu.menu-dark .navigation > li.active > a{
+    background-color: white;
+} */
+.header-navbar .navbar-header .navbar-brand {
+    padding: 11px 0px;
+}

@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <h2>Search your prospect:</h2>
+    <div class="card">
+      <div class="card-header">
+          <a [routerLink]="['/directseller/createContact']" (click)="goBack()">              
+          ADD NEW CONTACT </a>
+          <a [routerLink]="" class="float-right" (click)="goBack()"> BOOKMARKING</a>
+          <br/><br/>          
+          <div class="form-group">
+            <input type="text" class="form-control input cursor-pointer" />
+          </div>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <h5><b>TOP MATCHES</b></h5>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Anne Smith</li>
+              <li class="list-group-item">Renee Smith</li>
+              <li class="list-group-item">Greg Smith</li>
+              <li class="list-group-item">Patracia Smith</li>              
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-ms-12 col-md-6 margo-border-left">
+    <h3>Recent Items:</h3>      
+        <p><a [routerLink]="['/directseller/contactInformation']">Bill Deares</a></p>
+        <p><a [routerLink]="['/directseller/contactInformation']">Rachel Culpeper</a></p>
+        <p><a [routerLink]="['/directseller/contactInformation']">Tiffery Jones</a></p>      
+  </div>
+
+</div>

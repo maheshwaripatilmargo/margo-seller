@@ -1,0 +1,116 @@
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+  
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-title{
+  color: #009FAE;
+}
+.modal-body{
+  text-align: center;
+ color: #009FAE;
+ height: 100px;
+}
+.vl{
+  text-align: center;
+width:110px;
+background-color:white;
+border: 1px solid grey;
+border-radius: 10px;
+color: #009FAE;
+}
+
+
+/* body {
+  background-color: whitesmoke;
+  background-image: url("https://www.transparenttextures.com/patterns/lyonnette.png");
+  border-bottom: 0px solid black;
+  height: 450px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+} */
+
+/* === Wrapper Styles === */
+#FileUpload {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  margin: 30px;
+  padding: 10px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 10px;
+  background-color: white;
+  width: 415px;
+}
+
+/* === Upload Box === */
+.upload {
+  margin: 10px;
+  height: 85px;
+  border: 8px dashed #e6f5e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.upload p {
+  margin-top: 12px;
+  line-height: 0;
+  font-size: 22px;
+  color: #0c3214;
+  letter-spacing: 1.5px;
+}
+.upload__button {
+  background-color: #e6f5e9;
+  border-radius: 10px;
+  padding: 0px 8px 0px 10px;
+}
+.upload__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* === Uploaded Files === */
+.uploaded {
+  /* width: 375px; */
+  margin: 10px;
+  background-color: #e6f5e9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.file {
+  display: flex;
+  flex-direction: column;
+}
+.file__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  
+  line-height: 0;
+  color: #0c3214;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.fa-file-pdf {
+  padding: 10px;
+  font-size: 40px;
+  color: #0c3214;
+}
+.progress:last-child {
+  margin-bottom: unset;
+  width: 310px;
+}
+.bg-success{
+  background-color: #009FAE !important;
+}

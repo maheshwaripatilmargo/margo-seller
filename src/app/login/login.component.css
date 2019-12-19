@@ -1,0 +1,55 @@
+.margin-left-5{
+  margin-left: 5px;
+}
+.formstyle{
+  border: 2px solid #ccc;
+ border-radius: 4px;
+}
+.formstyle:hover{
+  border :2px solid rgb(141, 71, 125);
+  border-radius: 4px;
+}
+.formstyle{
+  width:100%;
+  margin:auto;
+  /* margin-left: 126px; */
+  /* text-align: center; */
+}
+.custbtn {
+  border-radius: 30px;
+  border: 1px solid #009FAE;
+  background-color: #009FAE;
+  padding:5px;
+  /* float: right; */
+  
+  width: 100px;
+  color:white;
+}
+.forgt {
+  text-align: right;
+  padding-top: 1rem;
+}
+img {
+  width: 70%;
+}
+
+
+.card-link{
+  color: #2e9cab;
+}
+
+
+@media only screen and (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+}
+body{
+  background-image: linear-gradient(#fcfcfc, #d6dbde) !important
+}
+.displaynone{
+  display: none;
+}
+.displayblock{
+  display: block;
+}

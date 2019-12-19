@@ -1,0 +1,37 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-header row mb-1">        
+        <a [routerLink]="" (click)="goBack()">
+          <i class="feather ft-chevron-left"></i>
+           Back </a>
+        <!-- <app-breadcrumb class="col-12" [breadcrumb]="breadcrumb"></app-breadcrumb> -->
+      </div>
+      <div class="content-body margo-content-body">
+        <section id="drag-area">
+          <div class="row">
+            <div class="col-md-12" *blockUI="'changelog'; message: 'Loading'">
+              <!-- <m-card  (reloadFunction)="reloadChangelog($event)">
+                <ng-container mCardHeaderTitle>
+                  Initial Release
+                </ng-container> -->
+                <!-- <ng-container mCardBody>
+                  <h5 class="my-2">10-12-2019 [V1.0]</h5>
+                  <div class="card-text">
+                    <ul>
+                      <li>Initial release</li>
+                    </ul>
+                  </div>
+                </ng-container>
+              </m-card> -->
+            
+            </div>
+          </div>
+        </section>
+          <router-outlet>
+                
+            </router-outlet>
+      </div>
+    </div>
+  </div>
+                           
+           

@@ -1,0 +1,28 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row mb-1">
+    </div>
+    <div class="content-body">
+      <section class="flexbox-container">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div class="col-md-4 col-10 box-shadow-0 p-0">
+            <div class="text-center col-12">
+              <img class="col-sm-12" src="../../assets/custom/images/margologo250.png" alt="branding logo">
+            </div>
+            <form class="form-horizontal text-center mt-1" [formGroup]="forgotForm" (ngSubmit)="forgotUserName()">
+              <input type="text" formControlName="email" class="form-control formstyle"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" id="email" placeholder="Enter Your Email">
+
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is Required</div>
+              </div>
+              <button type="submit" class="custbtn mt-2">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

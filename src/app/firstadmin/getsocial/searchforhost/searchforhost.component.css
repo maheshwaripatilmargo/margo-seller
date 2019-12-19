@@ -1,0 +1,33 @@
+.danger{
+    color:white !important;
+}
+.form-control{
+    background-color: silver;
+    color:black !important;
+}
+.para{
+    display:grid;
+    justify-content: center;
+}
+.custbtn {
+    border-radius: 30px;
+    border: 1px solid #1F98A3;
+    background-color: #1F98A3;
+    padding:5px;
+    /* float: right; */
+    
+    width: 100px;
+    color:white;
+}
+.btn{
+    border-radius: 30px;
+}
+.custbtns{
+    border-radius: 30px;
+    border: 1px solid #1F98A3;
+    background-color: white;
+    margin-left: 124px;
+    padding:5px;
+    width: 100px;
+    color:black;
+}

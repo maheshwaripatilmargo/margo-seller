@@ -1,0 +1,48 @@
+<h3>"Body Wash " Result:</h3>
+<div class="row">
+    <div class="col-md-offset-1"></div>
+    
+    <div class="col-md-5 col-xl-4 col-sm-12" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        
+        <div class="card" >
+                <div class="card-header">                    
+                </div>
+                <div class="card-content text-center" aria-expanded="true" routerLink="/directseller/themesList">
+                    <div class="card-body">
+                        <img src="/assets/custom/images/bodywash.png" />
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <p>G & H Naourish Body Wash</p>
+                    <a [routerLink]="" (click)="showProductInformation(productInformation)">QUICKVIEW</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<ng-template #productInformation let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Quick View</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body" routerLink="/directseller/themesList">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <img src="/assets/custom/images/bodywash.png" />
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h4><b>G & H Nourish  Body Wash</b></h4>
+                    <span>Item: # 123434</span>
+                    <div class="top">
+                        <h5><b>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </b></h5>
+                        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-margo-action btn-round" routerLink="/directseller/productsList" (click)="modal.dismiss('Cross click')" >Select</button>
+          </div>
+        </ng-template>
