@@ -1,77 +1,91 @@
 
-<div class="container">
-
-<div class="row">
-    <!-- <div class="col-md-1 col-sm-2">
-   
-   </div>
-   <div class="col-md-11 col-sm-10"> -->
-     <h3>Select a facebook post</h3>
-   <!-- </div> -->
-</div>
-
+<div class="container">  
+<h3 >Select a facebook post</h3> 
 <div class="row">
   <div class="col-md-8">
     <div class="card">
       <div class="card-body">
         <div class="form-group position-relative has-icon-left" style="padding:10px">
-          <input type="text" class="form-control" placeholder="Search">
-      <!-- <div class="form-control-position">
-            <i class="icon-magnifier font-small-3"></i>
-          </div> -->
-        </div>
+          <input type="text" class="form-control" placeholder="Search"> 
+    
+         </div>
       </div>
     </div>
 </div>
   <div class="col-md-4">
     <p>Library View:</p>
-    <button class="btn btn-info">Personal</button>&nbsp; &nbsp; &nbsp;
+    <button class="btn btn-info" (click)="ManegementData()">Personal</button>&nbsp; &nbsp; &nbsp;
     <button class="btn btn-white" id="hovercolor" style="color:black;" >Corporate</button>
   </div>
 
 </div>
 <div class="row">
- <h3><a href="">Create New Post</a></h3> 
-</div>
-<div class="row">
-   <h3><a href="#">Fun</a></h3> 
+ <h3>Create New Post</h3>  </div>
+ 
+ <div class="card-deck overflow-auto" *ngFor = "let item of catPostObj">
+  <h3>{{item.category_name}}</h3>
+ 
+  <div class="col-md-3" *ngFor = "let subItem of item['data']">
+  
+<div class="card">
+
+   
+      <div class="row">
+      <img src="{{subItem.post_screenshot}}" style="height: 200px;" (click)="imgDeatiledData(subItem.post_id)">
+    
+          <div class="col-md-12"><b>{{subItem.post_name}}</b></div>
+          <div class="col-md-12">{{subItem.createdon}}</div>
+      <div class="col-md-12"><a href="#">Edit</a> | <a href="#">Delete</a></div>
+    
+    </div>
+
+    </div>
   </div>
-<div class="row">
-<div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
-  <img src="/assets/custom/fbimages/imgone.png"  style="height: 200px;"></a>
-
-<div class="row">
-    <div class="col-md-12"><b>Adult Coloring</b></div>
-    <div class="col-md-6">9/12/19</div>
-<div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-
-</div>
-<div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
-  <img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;"></a>
-
-  <div class="row">
-      <div class="col-md-12"><b>Beauty Bash</b></div>
-      <div class="col-md-6">9/12/19</div>
-  <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-</div>
-<div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
-  <img src="/assets/custom/fbimages/imgone.png" style="height: 200px;"></a>
-
-  <div class="row">
-      <div class="col-md-12"><b>Adult Coloring</b></div>
-      <div class="col-md-6">9/12/19</div>
-  <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-</div>
-<div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
-  <img src="/assets/custom/fbimages/imgthree.png" style="height: 200px;"></a>
-
-  <div class="row">
-      <div class="col-md-12"><b>Girls Nightout</b></div>
-      <div class="col-md-6">9/12/19</div>
-  <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
+  
+  </div>
 </div>
 
-</div>
+ 
+
+
+
+ 
+
+
+
+    <!-- <div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
+      <img src="/assets/custom/fbimages/imgthree.png" style="height: 200px;"></a>
+    
+      <div class="row">
+          <div class="col-md-12"><b>Girls Nightout</b></div>
+          <div class="col-md-6">9/12/19</div>
+      <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
+    </div>
+    <div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
+      <img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;"></a>
+    
+      <div class="row">
+          <div class="col-md-12"><b>Beauty Bash</b></div>
+          <div class="col-md-6">9/12/19</div>
+      <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
+    </div>
+
+    <div class="col-md-3"><a [routerLink]="['/directseller/customfbpost']" >
+        <img src="/assets/custom/fbimages/imgone.png" style="height: 200px;"></a>
+      
+      <div class="row">
+          <div class="col-md-12"><b>Adult Coloring</b></div>
+          <div class="col-md-6">9/12/19</div>
+      <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
+      
+      </div>
+    
+    </div>
+
+
+
+
+
 
 <div class="row mt-3">
     <h3><a href="#">Health Product</a></h3>
@@ -146,4 +160,55 @@
           </div>
           
           </div>
-</div>
+</div>  -->
+
+ <!-- {{newdata | json}}
+ <ul *ngFor="let item of newdata">
+  <li>{{item.get_fb_post_category_fun.category_id}}</li>
+  <li>{{item.get_fb_post_category_fun.category_name}}</li>
+  <li>{{item.get_fb_post_category_fun.category_description}}</li>
+  <li>{{item.get_fb_post_category_fun.category_screenshot}}</li>
+  <li>{{item.get_fb_post_category_fun.createdby}}</li>
+  <li>{{item.get_fb_post_category_fun.createdon}}</li>
+  <li>{{item.get_fb_post_category_fun.modifiedby}}</li>
+  <li>{{item.get_fb_post_category_fun.modifiedon}}</li>
+  <li>{{item.get_fb_post_category_fun.isactive}}</li>
+  <li>{{item.get_fb_post_category_fun.isactive}}</li>
+</ul> 
+{{newmessage |json}}
+<ul *ngFor="let msg of newmessage">
+  <li>{{msg.get_fb_msg_snip_fun.msg_id}}</li>
+  <li>{{msg.get_fb_msg_snip_fun.msg_type}}</li>
+  <li>{{msg.get_fb_msg_snip_fun.msg_description}}</li>
+  <li>{{msg.get_fb_msg_snip_fun.isactive}}</li>
+  <li>{{msg.get_fb_msg_snip_fun.createdby}}</li>
+
+</ul>
+
+{{newcamp | json}}
+<ul *ngFor="let camp of newcamp">
+  <li>{{camp.get_fb_campaign_fun.campaign_id}}</li>
+  <li>{{camp.get_fb_campaign_fun.campaign_name}}</li>
+  <li>{{camp.get_fb_campaign_fun.campaign_description}}</li>
+  <li>{{camp.get_fb_campaign_fun. campaign_screenshot}}</li>
+ </ul>
+
+ {{newmngdata | json}}
+<ul *ngFor="let msg of newmngdata">
+  <li>{{msg.get_fb_post_fun.post_id}}</li>
+  <li>{{msg.get_fb_post_fun.category_id}}</li>
+  <li>{{msg.get_fb_post_fun.campaign_id}}</li>
+  <li>{{msg.get_fb_post_fun. post_name}}</li>
+  <li>{{msg.get_fb_post_fun. post_description}}</li>
+  <li>{{msg.get_fb_post_fun. post_screenshot}}</li>
+  <li>{{msg.get_fb_post_fun. post_url}}</li>
+  <li>{{msg.get_fb_post_fun. createdby}}</li>
+  <li>{{msg.get_fb_post_fun. createdon}}</li>
+  <li>{{msg.get_fb_post_fun. modifiedby}}</li>
+  <li>{{msg.get_fb_post_fun. modifiedon}}</li>
+  <li>{{msg.get_fb_post_fun. isactive}}</li> 
+   <li>{{msg.get_fb_post_fun. category_name}}</li>
+     <li>{{msg.get_fb_post_fun.campaign_name}}</li>
+     <li>{{msg.get_fb_post_fun. createdname}}</li>
+     <li>{{msg.get_fb_post_fun. modifiedname}}</li> 
+</ul>   -->

@@ -9,24 +9,27 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-      <div class="row">
-      <div class="col-md-6"><img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;"></div>
+      <div class="row"> 
+      <div class="col-md-6"><img src={{post_screenshot}}></div>
       <div class="col-md-6">
-        <h3>Girls Nightout</h3>
+        <h3>{{post_name}}</h3>
        <div><a href="">click imagesto</a></div>
        <div><a href="">View Post</a></div>
       </div></div>
 
-      <div class="row">
-          <div class="col-md-6">Message</div>
-          <div class="col-md-6"><i class="fa fa-comment-alt-dot"></i><a href="">  Add Message Snippet</a></div>
+      <div class="row mt-2">
+          <div class="col-md-12"><h4>Message
+          <a href="" style="float: right;"><i class='fas fa-comment-alt info'></i>Add Message Snippet</a> </h4></div>
           </div>
-          <div class="row">
-              <textarea class="form-control" rows="5"  id="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam officia quos accusantium nisi quod? Facere perferendis repellat culpa laudantium eius, consectetur saepe maxime nulla! Vero architecto esse assumenda doloremque maxime.</textarea>
-          </div>
+          <div class="row mt-1">
+            <div class="card" style="width: 100%;">
+            <textarea name="" id=""  rows="5"></textarea>
+          </div>  
+       </div>
+    
           
               <div class="form-group">
-                  <label for="sel1">Persnalization Field</label>
+                  <label for="sel1"><h4>Persnalization Field</h4></label>
                   <select class="form-control" id="sel1" name="sellist1">
                     <option>  your event shopping link </option>
                     <option>your host forst name</option>
@@ -42,7 +45,7 @@
           
 
           <div class="form-group">
-              <label for="sel1">Posted Url:</label>
+              <label for="sel1"><h4>Posted Url:</h4></label>
               <select class="form-control" id="sel1" name="sellist1">
                
                 <option>Website Link</option>
@@ -54,7 +57,7 @@
      </div>
 
      <div class="row">
-       <div class="col-md-12">Add new Post</div>
+       <div class="col-md-12"><h4>Add new Post</h4></div>
        </div>
        <div class="row">
           <div class="col-md-6"><img src="/assets/custom/fbimages/imgfour.png" style="height: 200px;"></div>
@@ -67,8 +70,8 @@
     
               </div>
 
-              <div class="form-group">
-                  <label for="sel1">Sava To Library </label> <a href="" style="float: right;">Edit Category</a>
+              <div class="form-group mt-1">
+                  <h4><label for="sel1">Sava To Library </label> <a href="" style="float: right;">Edit Category</a></h4>
                   <select class="form-control" id="sel1" name="sellist1">
                    
                     <option>Website Link</option>
@@ -79,22 +82,26 @@
                   </select>
          </div>
 
-         <button class="btn btn-info trxt-center">Schedule</button>
+         <button class="btn btn-info mx-auto d-block">Schedule</button>
     
 
   </div>
   <div class="col-md-1"></div>
-  <div class="col-md-3" style="background-color: white; height: 600px;">
+  <div class="col-md-3">
+    <div class="card overflow-auto p-1" style="height:350px">
+     
     <h2>Message snippet</h2>
-    <a href="">Message snippet</a>
+    <a href=""> Message snippet</a>
     <h3><a href="">Greetings</a></h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
+    <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
+      <li style="list-style:none;">{{msg.get_fb_msg_snip_fun.msg_description}}</li>
+    </ul>
     <h3><a href="">Invite</a></h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam at, porro reprehenderit  minus natus!</p>
+    <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
+      <li style="list-style: none;">{{msg.get_fb_msg_snip_fun.msg_description}}</li>
+    </ul>
+  
+  </div>
   </div>
   <div class="col-md-2"></div>
 </div>

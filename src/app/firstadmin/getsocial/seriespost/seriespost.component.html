@@ -1,138 +1,40 @@
-
-
 <div class="container">
+ <div class="row">
+  <div class="col-md-8"><h3 (click)="campaignData()">Select a facebook campaign</h3>
+    <div class="card"><div class="form-group p-1">
+      <input type="text" class="form-control" placeholder="Search">
+    </div></div>
+  </div>
+  <div class="col-md-4">
+      <p>Library View:</p><br>
+      <button class="btn btn-info">Personal</button> &nbsp; &nbsp; &nbsp;
+      <button class="btn btn-outline-dark" style="color:black;">Corporate</button><br>
+      <button class="btn  mt-1" style="width:60%; background-color:#007bff !important; color:white" (click)="CampaignImagesData(myPostId)">Next</button>
+  </div>
+</div>
 
+
+
+<div class="row">
+ <h3><a [routerLink]="['/directseller/fbcampaignname']">Create New capaign</a></h3> 
+</div>
+<div class="card-deck " *ngFor = "let item of catPostObj">
+    <h3>{{item.category_name}}</h3>
+    <div class="col-md-3" *ngFor = "let subItem of item['data']">
+  <div class="card" style="height:300px;width:100%" >
   <div class="row">
-      <!-- <div class="col-md-1 col-sm-2">
-     
-     </div>
-     <div class="col-md-11 col-sm-10"> -->
-       <h3>Select a facebook campaign</h3>
-     <!-- </div> -->
-  </div>
-  
-  <div class="row">
-    <div class="col-md-8">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <div class="form-control-position">
-              <i class="icon-magnifier font-small-3"></i>
-            </div>
-          </div>
+    <input type="checkbox" style="display:none" id="myCheckboxone-{{subItem.post_id}}"><label for="myCheckboxone-{{subItem.post_id}}">
+        <img src="{{subItem.post_screenshot}}" style="height: 200px;" (click)="imgDeatiledData(subItem.post_id)"></label>
+      <div class="col-md-12"><b>{{subItem.post_name}}</b></div>
+      <div class="col-md-12">{{subItem.createdon}}</div>
+      <div class="col-md-12"><a href="#">Edit</a> | <a href="#">Delete</a></div>
     </div>
-    <div class="col-md-4">
-      <p>Library View:</p>
-      <button class="btn btn-info" >Personal</button>&nbsp; &nbsp; &nbsp;
-      <button class="btn btn-white" style="color:black;">Corporate</button>
-    </div>
-  
+   </div>
   </div>
-  <div class="row">
-   <h3><a [routerLink]="['/directseller/fbcampaignname']">Create New capaign</a></h3> 
   </div>
-  <div class="row">
-     <h3><a href="#">Fun</a></h3> 
-    </div>
-  <div class="row">
-  <div class="col-md-3">
-    <img src="/assets/custom/fbimages/imgone.png" style="height: 200px;">
-  
-  <div class="row">
-      <div class="col-md-12"><b>Adult Coloring</b></div>
-      <div class="col-md-6">9/12/19</div>
-  <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-  
-  </div>
-  <div class="col-md-3"><img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;">
-  
-    <div class="row">
-        <div class="col-md-12"><b>Beauty Bash</b></div>
-        <div class="col-md-6">9/12/19</div>
-    <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-  </div>
-  <div class="col-md-3"><img src="/assets/custom/fbimages/imgone.png" style="height: 200px;">
-  
-    <div class="row">
-        <div class="col-md-12"><b>Adult Coloring</b></div>
-        <div class="col-md-6">9/12/19</div>
-    <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-  </div>
-  <div class="col-md-3"><img src="/assets/custom/fbimages/imgthree.png" style="height: 200px;">
-  
-    <div class="row">
-        <div class="col-md-12"><b>Girls Nightout</b></div>
-        <div class="col-md-6">9/12/19</div>
-    <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-  </div>
-  
-  </div>
-  
-  <div class="row mt-3">
-      <h3><a href="#">Health Product</a></h3>
-    </div>
-    <div class="row">
-       
-      
-        <div class="col-md-3"><img src="/assets/custom/fbimages/imgone.png" style="height: 200px;">
-        
-          <div class="row">
-              <div class="col-md-12"><b>Adult Coloring</b></div>
-              <div class="col-md-6">9/12/19</div>
-          <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-        </div>
-        <div class="col-md-3"><img src="/assets/custom/fbimages/imgthree.png" style="height: 200px;">
-        
-          <div class="row">
-              <div class="col-md-12"><b>Girls Nightout</b></div>
-              <div class="col-md-6">9/12/19</div>
-          <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-        </div>
-        <div class="col-md-3"><img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;">
-        
-          <div class="row">
-              <div class="col-md-12"><b>Beauty Bash</b></div>
-              <div class="col-md-6">9/12/19</div>
-          <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-        </div>
-  
-        <div class="col-md-3">
-            <img src="/assets/custom/fbimages/imgone.png" style="height: 200px;">
-          
-          <div class="row">
-              <div class="col-md-12"><b>Adult Coloring</b></div>
-              <div class="col-md-6">9/12/19</div>
-          <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-          
-          </div>
-        
-        </div>
-  
-  
-        <div class="row mt-2">
-            
-            <div class="col-md-3"><img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;">
-            
-              <div class="row">
-                  <div class="col-md-12"><b>Beauty Bash</b></div>
-                  <div class="col-md-6">9/12/19</div>
-              <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-            </div>
-           
-            <div class="col-md-3"><img src="/assets/custom/fbimages/imgthree.png" style="height: 200px;">
-            
-              <div class="row">
-                  <div class="col-md-12"><b>Girls Nightout</b></div>
-                  <div class="col-md-6">9/12/19</div>
-              <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-            </div>
-            <div class="col-md-3"><img src="/assets/custom/fbimages/imgone.png" style="height: 200px;">
-            
-              <div class="row">
-                  <div class="col-md-12"><b>Adult Coloring</b></div>
-                  <div class="col-md-6">9/12/19</div>
-              <div class="col-md-6"><a href="#">Edit</a> | <a href="#">Delete</a></div></div>
-            </div>
-            
-            </div>
-  </div>
-  
+
+</div>
+<!-- <app-fbcampaignname [Id_data]="myValue"></app-fbcampaignname> -->
+
+
+
