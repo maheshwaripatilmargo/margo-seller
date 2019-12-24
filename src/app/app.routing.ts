@@ -38,6 +38,7 @@ import { JoinMessageComponent } from './firstadmin/join-message/join-message.com
 import { JoinConfirmComponent } from './firstadmin/join-confirm/join-confirm.component';
 import { JoinThemesListComponent } from './firstadmin/join-themes-list/join-themes-list.component';
 import { CreateContactComponent } from './firstadmin/create-contact/create-contact.component';
+import { CustomerSearchComponent } from './firstadmin/customer-search/customer-search.component';
 const appRoutes: Routes = [
   // Public layout
   {
@@ -105,6 +106,7 @@ const appRoutes: Routes = [
           { path: "crosssell", component: CrosssellComponent },
 
           { path: "mydashboard", component: MydashboardComponent },
+          { path: "searchCustomer", component: CustomerSearchComponent}
         ]
       },
      

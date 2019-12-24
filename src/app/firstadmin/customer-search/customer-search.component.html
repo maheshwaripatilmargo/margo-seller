@@ -1,0 +1,70 @@
+<h2>Search your Customer:</h2>
+<div class="row">
+  <div class="col-sm-12 col-md-6">    
+    <div class="card">
+      <div class="card-header">
+          <a [routerLink]="['/directseller/createContact']" (click)="goBack()">              
+          ADD NEW CONTACT </a>
+          <a [routerLink]="" class="float-right" (click)="goBack()"> BOOKMARKING</a>
+          <br/><br/>          
+          <div class="form-group" id="typeahead-search">
+            <input id="typeahead-basic" type="text" placeholder="Enter prospect name" class="form-control input cursor-pointer" [container]="typeahead-search" [(ngModel)]="model" [focusFirst]="true" [ngbTypeahead]="search"  (selectItem)="selectContact($event)"  />
+          </div>
+      </div>
+      <ng-template #rt let-r="result" let-t="term">
+        <li class="mw-100">{{r}}</li>
+      </ng-template>
+      
+      <div class="card-content">
+      </div>
+    </div>
+  </div>
+  <div class="col-ms-12 col-md-6 margo-border-left">
+    <div *ngIf="!selectedProspect">
+    <h3>Recent Items:</h3>      
+        <p><a [routerLink]="['/directseller/contactInformation']">Bill Deares</a></p>
+        <p><a [routerLink]="['/directseller/contactInformation']">Rachel Culpeper</a></p>
+        <p><a [routerLink]="['/directseller/contactInformation']">Tiffery Jones</a></p>      
+    </div>
+    <div class="card" *ngIf="selectedProspect">
+      <div class="card-header">
+        <h3>Contact Quick View</h3>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <h4><b>Deanna Smith</b></h4>
+          <h5>PROSPECT</h5>
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              Email
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              d.smith@amway.com
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              Phone
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <a href="skype:(917-555-172)?call">(917-555-172)</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              Address
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <p>123 Mark Street, New Yark city</p>
+            </div>
+          </div> 
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-margo-cancel btn-round" routerLink="/directseller/contactInformation">More Information</button>
+          <button class="btn btn-margo-action btn-round" routerLink="/directseller/propspectLanding">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

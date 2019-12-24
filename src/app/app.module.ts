@@ -110,10 +110,9 @@ import { HostMessageComponent } from './firstadmin/host-message/host-message.com
 import { HostConfirmComponent } from './firstadmin/host-confirm/host-confirm.component';
 import { JoinThemesListComponent } from './firstadmin/join-themes-list/join-themes-list.component';
 import { JoinMessageComponent } from './firstadmin/join-message/join-message.component';;
-import { JoinConfirmComponent } from './firstadmin/join-confirm/join-confirm.component'
-;
-import { CreateContactComponent } from './firstadmin/create-contact/create-contact.component'
-
+import { JoinConfirmComponent } from './firstadmin/join-confirm/join-confirm.component';
+import { CreateContactComponent } from './firstadmin/create-contact/create-contact.component';;
+import { CustomerSearchComponent } from './firstadmin/customer-search/customer-search.component'
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
@@ -207,7 +206,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         JoinThemesListComponent ,
         JoinMessageComponent ,
         JoinConfirmComponent ,
-        CreateContactComponent ],
+        CreateContactComponent ,
+        CustomerSearchComponent],
     providers: [
         AuthGuard,
         AlertService,
