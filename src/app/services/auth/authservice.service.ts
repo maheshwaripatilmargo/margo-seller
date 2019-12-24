@@ -19,7 +19,11 @@ export class AuthserviceService {
 
 
   constructor(private http: HttpClient, public baseService: BaseserviceService) {
+<<<<<<< HEAD
     this.baseUrl = baseService.baseUrl1 + 'auth/ds/';
+=======
+    this.baseUrl = baseService.baseUrl1 + 'auth/';
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   }
   checkLogin2() {
     return this.http.get<any>(this.baseUrl + "get-events-list")
@@ -47,23 +51,35 @@ export class AuthserviceService {
         catchError(this.handleError)
       );
   }
+<<<<<<< HEAD
 
   forgotUserNames(value) {
     let body = value;
     return this.http.post<any>(`${this.baseUrl}forgotUserName`, body, httpOptions)
       .pipe(catchError(this.handleError));
   }
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   setUserNameService(value, token) {
     let body = value;
     return this.http.post<any>(`${this.baseUrl}resetUserName/${token}`, body, httpOptions)
       .pipe(catchError(this.handleError));
   }
+<<<<<<< HEAD
   verifyUserName(value, token) {
     let body = value;
     if (token) {
       httpOptions.headers = httpOptions.headers.set('x-auth', token);
     }
     return this.http.post<any>(`${this.baseService.baseUrl1}api/ds/checkUserNameExists`, body, httpOptions)
+=======
+  verifyUserName(value,token) {
+    let body = value;
+    if(token){
+      httpOptions.headers = httpOptions.headers.set('x-auth', token);
+    }
+    return this.http.post<any>(`${this.baseService.baseUrl1}user/checkUserNameExists`, body, httpOptions)
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
       .pipe(catchError(this.handleError));
   }
 

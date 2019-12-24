@@ -5,7 +5,11 @@ import { first } from 'rxjs/operators';
 import { AuthService } from '../_services/auth.service';
 import { AlertService } from '../_services/alert.service';
 import { AuthserviceService } from '../services/auth/authservice.service';
+<<<<<<< HEAD
 // import { AdminoneService } from '../services/adminone/adminone.service';
+=======
+import { AdminoneService } from '../services/adminone/adminone.service';
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 import { ToastrService } from 'ngx-toastr';
 @Component({
     templateUrl: 'login.component.html',
@@ -26,7 +30,11 @@ export class LoginComponent implements OnInit {
         private alertService: AlertService,
         public authService: AuthService,
         private authenticationService: AuthserviceService,
+<<<<<<< HEAD
         // private adminService: AdminoneService,
+=======
+        private adminService: AdminoneService,
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         public toastrService: ToastrService
     ) { }
 
@@ -63,6 +71,7 @@ export class LoginComponent implements OnInit {
 
         this.authenticationService.checkLogin(value).subscribe(data => {
             if (data.status) {
+<<<<<<< HEAD
                 localStorage.setItem("accesToken", data.token);
                 console.log('SET');
                 
@@ -70,6 +79,13 @@ export class LoginComponent implements OnInit {
                     this.toastrService.success(data.message)
                 }, 1000);
                 this.router.navigateByUrl('directseller/help');
+=======
+                localStorage.setItem("accesToken", data.token)
+                setTimeout(() => {
+                    this.toastrService.success(data.message)
+                }, 1000);
+                this.router.navigateByUrl('business/help');
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
             } else {
                 setTimeout(function () {
                     self.status = false;
@@ -82,7 +98,10 @@ export class LoginComponent implements OnInit {
                 this.toastrService.error(error);
             }, 1000);
         });
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         // this.authService.doLogin(value)
         //     .then(res => {
         //         this.setUserInStorage(res);
@@ -96,7 +115,11 @@ export class LoginComponent implements OnInit {
         //         this.submitted = false;
 
         //     });
+<<<<<<< HEAD
     
+=======
+    }
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
     setUserInStorage(res) {
         if (res.user) {

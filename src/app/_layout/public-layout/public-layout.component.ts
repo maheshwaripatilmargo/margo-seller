@@ -34,6 +34,10 @@ export class PublicLayoutComponent implements OnInit {
     const previosBodyClassList = [].slice.call(document.body.classList);
     const self = this;
     previosBodyClassList.forEach(function (c) {
+<<<<<<< HEAD
+=======
+      console.log('Removing body classes:::::', c)
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
       self.renderer.removeClass(document.body, c);
     });
     const currentBodyClassList = ['vertical-layout', 'bg-full-screen-image', 'vertical-overlay-menu',

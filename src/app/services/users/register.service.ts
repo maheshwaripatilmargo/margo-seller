@@ -1,7 +1,11 @@
 
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpErrorResponse, HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { catchError, map } from 'rxjs/operators';
+=======
+import { catchError } from 'rxjs/operators';
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 import { throwError } from 'rxjs';
 import { BaseserviceService } from '../baseservice.service';
 // const httpOptions = {
@@ -43,6 +47,7 @@ export class RegisterService {
   }
   getCountryData() {
     return this.http.get<any>(this.baseUrl + "user/getCountryData", this.httpHeadersOptions())
+<<<<<<< HEAD
       .pipe(catchError(this.handleError));
   }
 
@@ -65,11 +70,24 @@ export class RegisterService {
   getModuleData1(value) {
     return this.http.get<any>(this.baseUrl + "user/getModuleItemDataById/" + value, this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
+=======
+    .pipe(catchError(this.handleError));
+  }
+  
+  getCompanyData() {
+    return this.http.get<any>(this.baseUrl + "user/getCompanyData", this.httpHeadersOptions())
+    .pipe(catchError(this.handleError));
+  }
+  getRoleData() {
+    return this.http.get<any>(this.baseUrl + "user/getRoleData", this.httpHeadersOptions())
+    .pipe(catchError(this.handleError));
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   }
   getUserById(id) {
     var body = {};
     return this.http.get<any>(this.baseUrl + `user/getUserById/${id}`, this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
+<<<<<<< HEAD
   }
   getPermissionData() {
     var body = {};
@@ -100,6 +118,16 @@ getModuleItems(){
       .pipe(catchError(this.handleError));
   }
 
+=======
+  }   
+  updateUser(body) {
+    var body = body;
+    console.log(body);
+    
+    return this.http.put<any>(this.baseUrl + "user/updateUser", body, this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   private httpHeadersOptions() {
     return this.baseService.httpHeadersOptions();
   }

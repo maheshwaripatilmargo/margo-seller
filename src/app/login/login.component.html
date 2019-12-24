@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<div class="app-content content">
     <div class="content-wrapper">
         <div class="content-header row">
@@ -25,10 +26,40 @@
                                 <div *ngIf="f.email.errors.required">Username is required</div>
                             </div>
 
+=======
+﻿<div class="app-content content" >
+    <div class="content-wrapper" >
+        <div class="content-header row mb-1">
+        </div>
+        <div class="content-body" >
+            <section  class="flexbox-container">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <div class="col-md-4 col-sm-4 col-xs-12  col-10 box-shadow-0 p-0">
+
+                        <div class="text-center">
+                            <img src="../../assets/custom/images/margologo250.png"
+                                alt="branding logo">
+                        </div>
+
+                        <div style="font-size:15px;color:red;text-align:center;font-weight: bold;" [ngClass]="status ? 'displayblock' : 'displaynone'">
+                            {{emsg}}
+                        </div>
+                        <form class="form-horizontal text-center mt-3" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+                            <!-- <fieldset class="form-group position-relative has-icon-left"> -->
+                            <input type="text" formControlName="email" class="form-control formstyle"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" id="user-name"
+                                placeholder=" Username" required>
+                       
+                            <div style="text-align:left" *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Username is required</div>
+                            </div>
+                           
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
                             <input type="password" placeholder="Password" formControlName="password"
                                 class="form-control formstyle mt-2"
                                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
 
+<<<<<<< HEAD
                             <div style="text-align:left" *ngIf="submitted && f.password.errors"
                                 class="invalid-feedback">
                                 <div *ngIf="f.password.errors.required">Password is required</div>
@@ -43,6 +74,19 @@
                            
 
                             <button type="submit" class="custbtn mt-2">
+=======
+                            <div style="text-align:left"  *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                            </div>
+                            <div class="forgt">
+                                <a [routerLink]="['/forgot-pwd']" class="card-link">Forgot Password?</a>
+                            </div>
+                        
+                            
+                          
+                     
+                            <button type="submit" class="custbtn mt-2" >
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
                                 <!-- <i class="fa fa-refresh fa-spin" *ngIf="submitted"></i> -->
                                 <!-- <i class="feather ft-unlock" *ngIf="!submitted"></i>  -->
                                 Login
@@ -54,6 +98,10 @@
 
         </div>
     </div>
+<<<<<<< HEAD
 </div>
 
 
+=======
+</div>
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c

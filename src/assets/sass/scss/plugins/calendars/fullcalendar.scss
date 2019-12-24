@@ -35,6 +35,7 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
   outline: none;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // .fc-toolbar .fc-state-active, .fc-toolbar .ui-state-activ{
 
 // }
@@ -44,6 +45,11 @@ th.fc-widget-header, .fc-basic-view td.fc-day-number, .fc-basic-view td.fc-week-
   // @extend .btn-secondary.active
 }
 >>>>>>> b06a8923425332357620626aab38c5f0dc65ddbf
+=======
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active{
+  // @extend .btn-secondary.active
+}
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 .fc-day-grid-event {
   margin: 0 5px 5px 5px;
   padding: 4px 8px;

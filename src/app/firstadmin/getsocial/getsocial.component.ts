@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { AuthService, FacebookLoginProvider, SocialUser } from 'angularx-social-login';
 import { FbService } from 'src/app/services/fbservice/fb.service';
 
 import { CookieService } from 'ngx-cookie-service';
 
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
 @Component({
   selector: 'app-getsocial',
@@ -12,6 +15,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class GetsocialComponent implements OnInit {
 
+<<<<<<< HEAD
   user: SocialUser;
   loggedIn: boolean;
   cookieValue = 'UNKNOWN';
@@ -85,3 +89,11 @@ export class GetsocialComponent implements OnInit {
   }
 }
 
+=======
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c

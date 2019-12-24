@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+<<<<<<< HEAD
 @import '~angular-tree-component/dist/angular-tree-component.css';
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 body {
     background-image: url("assets/custom/images/Background-Image.jpg") !important;
     background-size: auto;
@@ -183,6 +186,7 @@ toast-center-center {
     background-color: #000000;
     opacity: 0.4;
   }
+<<<<<<< HEAD
 
   .treeclass tree-viewport {
     height: auto !important;
@@ -210,6 +214,8 @@ app-roles .nav.nav-tabs.nav-underline {
 }
 
 
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   /* Responsive Design */
   @media all and (max-width: 240px) {
     .toast-container .ngx-toastr.div {
@@ -230,14 +236,108 @@ app-roles .nav.nav-tabs.nav-underline {
       right: -0.2em;
       top: -0.2em;
     }
+<<<<<<< HEAD
     mat-paginator .mat-paginator-container {
       min-width: 2518px;
       background-color: #fff;
     }
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   }
   @media all and (min-width: 481px) and (max-width: 768px) {
     .toast-container .ngx-toastr.div {
       padding: 15px 15px 15px 50px;
       width: 25em;
     }
+<<<<<<< HEAD
   }
+=======
+  }
+
+/**
+* Button designs
+*/
+
+.cbtn{
+  text-align: left;
+  width:270px;
+  background-color:white;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding:0px;
+  color: #6D6D6D;
+}
+
+.customimg{  
+  height: 35px;
+  width: 35px;
+}
+
+.cbtn .customimg {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.top{
+  margin-top: 15px;
+}
+
+/*
+* Margo button
+*/
+
+.btn.btn-margo-action{
+    padding-top: 0.50rem;
+    padding-bottom: 0.50rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-color: #0DA5A7 !important;    
+    background-color: #0DA5A7 !important;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-right: 1rem!important;
+}
+.btn.btn-margo-action:hover {
+  color: #ffffff;
+}
+.btn.btn-margo-cancel {
+  padding-top: 0.50rem;
+  padding-bottom: 0.50rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-color: #0DA5A7 !important;    
+  background-color: #FFFFFF !important;
+  color: #0DA5A7;        
+  font-weight: 600;
+  margin-right: 1rem!important;
+}
+
+.input-group-margo {
+  background-size: 40px;
+  width: 40px;
+}
+
+.input-group-facebook {
+  background-image: url(/assets/custom/images/logos/2.jpg);  
+}
+
+.input-group-twitter {
+  background-image: url(/assets/custom/images/logos/4.jpg);  
+}
+.input-group-instagram {
+  background-image: url(/assets/custom/images/logos/1.jpg);  
+}
+.input-group-linkedin {
+  background-image: url(/assets/custom/images/logos/7.jpg);
+  background-size: 40px;
+  width: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .margo-content-body {
+    margin-left: 10%;
+  }
+  .margo-border-left {
+    border-left: 2px solid #8080803d;
+  }
+}
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c

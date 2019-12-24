@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
+=======
+import {Location} from '@angular/common';
+
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
 @Component({
   selector: 'app-firstadmin',
@@ -7,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstadminComponent implements OnInit {
 
+<<<<<<< HEAD
   constructor() { }
 
   ngOnInit() {
   }
+=======
+  constructor(private location: Location) { }
+
+  ngOnInit() {
+  }
+  goBack() {
+    this.location.back();
+  }
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
 }

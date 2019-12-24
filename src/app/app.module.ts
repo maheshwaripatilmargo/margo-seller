@@ -9,17 +9,27 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
+<<<<<<< HEAD
 // import { AuthGuard } from './_guards/auth.guard';
+=======
+import { AuthGuard } from './_guards/auth.guard';
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 import { AlertComponent } from './_directives/alert.component';
 import { AlertService } from './_services/alert.service';
 import { AuthService } from './_services/auth.service';
 import { NgxPaginationModule } from "ngx-pagination";
 import { OrderModule } from "ngx-order-pipe";
+<<<<<<< HEAD
 // import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
+=======
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 // Routing
 import { routing } from './app.routing';
 
@@ -88,12 +98,17 @@ import { TypeofpostComponent } from './firstadmin/getsocial/typeofpost/typeofpos
 import { EventhostComponent } from './firstadmin/getsocial/eventhost/eventhost.component';
 import { SearchforhostComponent } from './firstadmin/getsocial/searchforhost/searchforhost.component';
 import { HostedcampaignsComponent } from './firstadmin/getsocial/hostedcampaigns/hostedcampaigns.component';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 import { ResetpasswordComponent } from './auth/resetpassword/resetpassword.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ConfirmationDialogComponent } from './_utils/confirmation-dialog/confirmation-dialog.component';
 import { ConfirmationDialogService } from './_utils/confirmation-dialog/confirmation-dialog.service'
 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+<<<<<<< HEAD
 
 
 import { from } from 'rxjs';;
@@ -106,11 +121,34 @@ import { TreeModule } from 'angular-tree-component';
 import { NgxDataTableModule } from 'projects/ngx-data-table/src/public_api';
 
 
+=======
+import { from } from 'rxjs';;
+import { SetusernameComponent } from './auth/setusername/setusername.component';
+import { ImportFilesDialogComponent } from './_utils/import-files-dialog/import-files-dialog.component';
+import { ImportFilesDialogService } from './_utils/import-files-dialog/import-files-dialog.service';
+import { SearchContactComponent } from './firstadmin/search-contact/search-contact.component';
+import { ContactInformationComponent } from './firstadmin/contact-information/contact-information.component';
+import { ProspectLandingComponent } from './firstadmin/prospect-landing/prospect-landing.component';
+import { ProductSearchComponent } from './firstadmin/product-search/product-search.component';
+import { ProductsListComponent } from './firstadmin/products-list/products-list.component';
+import { ThemesListComponent } from './firstadmin/themes-list/themes-list.component';
+import { PersonalMessageComponent } from './firstadmin/personal-message/personal-message.component';
+import { ConfirmCampaignComponent } from './firstadmin/confirm-campaign/confirm-campaign.component';;
+import { HostThemesListComponent } from './firstadmin/host-themes-list/host-themes-list.component';
+import { HostMessageComponent } from './firstadmin/host-message/host-message.component';
+import { HostConfirmComponent } from './firstadmin/host-confirm/host-confirm.component';
+import { JoinThemesListComponent } from './firstadmin/join-themes-list/join-themes-list.component';
+import { JoinMessageComponent } from './firstadmin/join-message/join-message.component';;
+import { JoinConfirmComponent } from './firstadmin/join-confirm/join-confirm.component';
+import { CreateContactComponent } from './firstadmin/create-contact/create-contact.component';;
+import { CustomerSearchComponent } from './firstadmin/customer-search/customer-search.component'
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
 };
 
+<<<<<<< HEAD
 
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 
@@ -154,6 +192,8 @@ export function provideConfig() {
 
 
 
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 @NgModule({
     imports: [
         BrowserModule,
@@ -165,7 +205,11 @@ export function provideConfig() {
         BreadcrumbModule,
         NgbModule,
         FormsModule,
+<<<<<<< HEAD
         // NgxDatatableModule,
+=======
+        NgxDatatableModule,
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features
@@ -183,6 +227,7 @@ export function provideConfig() {
         LoadingBarRouterModule,
         Ng2SearchPipeModule,
         MatSlideToggleModule,
+<<<<<<< HEAD
         SocialLoginModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -193,6 +238,11 @@ export function provideConfig() {
             template: BlockTemplateComponent
         }),
         NgxDataTableModule
+=======
+        BlockUIModule.forRoot({
+            template: BlockTemplateComponent
+        })
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
     ],
     declarations: [
         AppComponent,
@@ -225,14 +275,19 @@ export function provideConfig() {
         ReplunishmentComponent,
         CrosssellComponent,
         MydashboardComponent,
+<<<<<<< HEAD
        
         FirstadminComponent,
        
+=======
+        FirstadminComponent,
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         SocialpostComponent,
         TypeofpostComponent,
         EventhostComponent,
         SearchforhostComponent,
         HostedcampaignsComponent,
+<<<<<<< HEAD
        
         ResetpasswordComponent,
        
@@ -258,13 +313,40 @@ export function provideConfig() {
         SeriespostComponent],
     providers: [
         // AuthGuard,
+=======
+        ResetpasswordComponent,     
+        ConfirmationDialogComponent,
+        SetusernameComponent,
+        ImportFilesDialogComponent,
+        SearchContactComponent , 
+        ContactInformationComponent ,
+        ProspectLandingComponent ,
+        ProductSearchComponent ,
+        ProductsListComponent ,
+        ThemesListComponent ,
+        PersonalMessageComponent,
+        ConfirmCampaignComponent,
+        HostThemesListComponent ,
+        HostMessageComponent ,
+        HostConfirmComponent ,
+        JoinThemesListComponent ,
+        JoinMessageComponent ,
+        JoinConfirmComponent ,
+        CreateContactComponent ,
+        CustomerSearchComponent],
+    providers: [
+        AuthGuard,
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         AlertService,
         NavbarService,
         DataApiService,
         AuthService,
+<<<<<<< HEAD
         CookieService,
        {provide: AuthServiceConfig,
         useFactory: provideConfig},
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         {
             provide: HAMMER_GESTURE_CONFIG,
             useClass: HammerGestureConfig
@@ -277,7 +359,11 @@ export function provideConfig() {
     entryComponents: [
         BlockTemplateComponent,
         ConfirmationDialogComponent,
+<<<<<<< HEAD
          ImportFilesDialogComponent
+=======
+        ImportFilesDialogComponent
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
     ],
     bootstrap: [AppComponent],
     exports: [RouterModule]

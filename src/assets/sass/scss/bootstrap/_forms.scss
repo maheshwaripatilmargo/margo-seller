@@ -17,7 +17,10 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+<<<<<<< HEAD
   padding-left:22px;
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @include border-radius($input-border-radius, 0);

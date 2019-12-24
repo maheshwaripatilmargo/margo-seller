@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h2>Add a New Contact</h2>
+      <form>
+          <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" class="form-control" />
+          </div>
+          <div class="form-group">
+                <label>Phone:</label>
+                <input type="phone" class="form-control" />
+            </div>
+            <div class="form-group">
+                    <label>Address:</label>
+            <textarea rows="5" class="form-control" name="address"></textarea>
+            </div>
+            <div class="form-group">
+                    <label>Facebook Link:</label>
+            <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text input-group-margo input-group-facebook" ></div>
+            </div>
+            <input rows="5" class="form-control" name="facebookURL" />
+            </div>     
+            </div>
+            <div class="form-group">
+                    <label>Twitter Link:</label>
+            <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text input-group-margo input-group-twitter" ></div>
+                    </div>
+            <input rows="5" class="form-control" name="twitterURL" />
+            </div>
+            </div>
+            <div class="form-group">
+                    <label>Instagram Link:</label>
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                            <div class="input-group-text input-group-margo input-group-instagram" ></div>
+                            </div>
+            <input rows="5" class="form-control" name="instagramURL" />
+            </div>
+            </div>
+            <div class="form-group">
+                    <label>LinkedIn Link:</label>
+            <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text input-group-margo input-group-linkedin" ></div>
+                    </div>
+            <input rows="5" class="form-control" name="linkedInURL" />
+            </div>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-round btn-margo-action" [routerLink]="['/directseller/contactInformation']">Next</button>
+            </div>
+      </form>
+      
+    </div>
+  
+  </div>

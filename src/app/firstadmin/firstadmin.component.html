@@ -1,5 +1,6 @@
 <div class="app-content content">
     <div class="content-wrapper">
+<<<<<<< HEAD
       <div class="content-header row mb-1">
         <!-- <app-breadcrumb class="col-12" [breadcrumb]="breadcrumb"></app-breadcrumb> -->
       </div>
@@ -9,6 +10,20 @@
             <div class="col-md-12" *blockUI="'changelog'; message: 'Loading'">
               <m-card  (reloadFunction)="reloadChangelog($event)">
                 <!-- <ng-container mCardHeaderTitle>
+=======
+      <div class="content-header row mb-1">        
+        <a [routerLink]="" (click)="goBack()">
+          <i class="feather ft-chevron-left"></i>
+           Back </a>
+        <!-- <app-breadcrumb class="col-12" [breadcrumb]="breadcrumb"></app-breadcrumb> -->
+      </div>
+      <div class="content-body margo-content-body">
+        <section id="drag-area">
+          <div class="row">
+            <div class="col-md-12" *blockUI="'changelog'; message: 'Loading'">
+              <!-- <m-card  (reloadFunction)="reloadChangelog($event)">
+                <ng-container mCardHeaderTitle>
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
                   Initial Release
                 </ng-container> -->
                 <!-- <ng-container mCardBody>
@@ -18,6 +33,7 @@
                       <li>Initial release</li>
                     </ul>
                   </div>
+<<<<<<< HEAD
                 </ng-container> -->
               </m-card>
               <router-outlet>
@@ -26,6 +42,17 @@
             </div>
           </div>
         </section>
+=======
+                </ng-container>
+              </m-card> -->
+            
+            </div>
+          </div>
+        </section>
+          <router-outlet>
+                
+            </router-outlet>
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
       </div>
     </div>
   </div>

@@ -68,7 +68,11 @@ export class PrivateLayoutComponent implements OnInit {
 
   ngOnInit() {
     const _self = this;
+<<<<<<< HEAD
     this.renderer.removeClass(document.body, 'bg-full-screen-image');
+=======
+    this.renderer.addClass(document.body, 'bg-full-screen-image');    
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
     // Subscribe to config changes
     this._themeSettingsService.config
@@ -102,7 +106,11 @@ export class PrivateLayoutComponent implements OnInit {
     if (this._themeSettingsConfig.layout.style === 'vertical' &&
       window.innerWidth < AppConstants.MOBILE_RESPONSIVE_WIDTH) {
       const previosBodyClassList = [].slice.call(document.body.classList);
+<<<<<<< HEAD
       previosBodyClassList.forEach(function (c) {
+=======
+      previosBodyClassList.forEach(function (c) {        
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         _self.renderer.removeClass(document.body, c);
       });
       if (this._themeSettingsConfig.layout.style === 'vertical') {
@@ -130,7 +138,11 @@ export class PrivateLayoutComponent implements OnInit {
     } else if (this._themeSettingsConfig.layout.style === 'horizontal' &&
       window.innerWidth < AppConstants.MOBILE_RESPONSIVE_WIDTH_HORIZONTAL) {
       const previosBodyClassList = [].slice.call(document.body.classList);
+<<<<<<< HEAD
       previosBodyClassList.forEach(function (c) {
+=======
+      previosBodyClassList.forEach(function (c) {        
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
         _self.renderer.removeClass(document.body, c);
       });
       currentBodyClassList = ['horizontal-layout', 'horizontal-menu', '2-columns', 'pace-done',
@@ -159,7 +171,14 @@ export class PrivateLayoutComponent implements OnInit {
         } else if (c === 'menu-expanded') {
           callapseOrExpanded = 'menu-expanded';
         }
+<<<<<<< HEAD
         _self.renderer.removeClass(document.body, c);
+=======
+        if(c != 'bg-full-screen-image') {
+          _self.renderer.removeClass(document.body, c);
+        }
+        
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
       });
       if (this._themeSettingsConfig.layout.style === 'vertical') {
         if (callapseOrExpanded === '') {

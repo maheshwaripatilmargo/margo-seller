@@ -16,14 +16,21 @@ export class ForgotUserComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     public router: Router,
+<<<<<<< HEAD
     private authserviceService: AuthserviceService,
     private alertService: AlertService,
     public toastrService: ToastrService) { }
+=======
+    private authenticationService: AuthserviceService,
+    private alertService: AlertService,
+    public toastrService:ToastrService) { }
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
 
   ngOnInit() {
     this.forgotForm = this.formBuilder.group({
       email: ['', Validators.required],
+<<<<<<< HEAD
     });
   }
   get f() { return this.forgotForm.controls; }
@@ -47,5 +54,14 @@ export class ForgotUserComponent implements OnInit {
       console.error(err);
 
     })
+=======
+    }, {
+      // validator: MustMatch('password', 'cpassword')
+    });
+  }
+  get f() { return this.forgotForm.controls; }
+  forgotUserName(){
+    console.log(this.f.email.value);
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
   }
 }

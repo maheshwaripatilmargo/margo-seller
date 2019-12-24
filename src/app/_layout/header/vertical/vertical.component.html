@@ -208,6 +208,7 @@
               </span>
             </a>
             <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownProfileMenu">
+<<<<<<< HEAD
               <div class="row">
                 <div class="col  close-icon">
                   <span class="fa fa-close"></span>
@@ -225,6 +226,19 @@
                       <span class="fa fa-close close">Close</span> 
                </div> -->
               </div>
+=======
+             <div class="row">
+               <div class="col-8 mt-2" style="display: grid;justify-content: right;">
+                  <img src="../../../../assets/custom/images/profile (2).png">
+                  <div *ngIf="status" style="color:white;margin-left: 24px;
+                  margin-top: 10px;">{{userProfileDetails.admin_fname+" "+userProfileDetails.admin_lname}}</div>
+               </div>
+               
+               <div class="col-4" style="justify-content: right;">
+                      <span class="fa fa-close close">Close</span> 
+               </div>
+            </div>
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
               <div class="mt-2">
 
                 <a class="dropdown-item" [routerLink]="['/user/user-profile']"> My Profile</a>
@@ -235,8 +249,13 @@
                 <a class="dropdown-item" [routerLink]="['/chats']">My Hosts</a>
                 <a class="dropdown-item" [routerLink]="['/chats']">My Campaigns</a> -->
                 <a class="dropdown-item" [routerLink]="['/chats']">Help & Tips</a>
+<<<<<<< HEAD
                 <a class="dropdown-item logout-align" (click)="logout()">Logout</a>
 
+=======
+                <a class="dropdown-item" (click)="logout()" style="color:#ffffff;text-decoration:underline;">Logout</a>
+              
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 
               </div>
               <!-- <div class="dropdown-divider"></div> -->

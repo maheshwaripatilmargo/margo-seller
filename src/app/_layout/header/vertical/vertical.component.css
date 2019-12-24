@@ -22,6 +22,7 @@
 /* :host ::ng-deep .dropdown-item:active {
     color: #fff !important;
 } */
+<<<<<<< HEAD
 .close-icon {
   justify-content: end;
     display: grid;
@@ -41,6 +42,9 @@
   padding-top: 0 !important;
   font-size: 15px;
 }
+=======
+
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 @media (max-width: 991.98px) {
   .ft-toggle-right {
     display: none !important;
@@ -84,8 +88,11 @@
 .dropdown-item {
   color: white;
   line-height: 30px;
+<<<<<<< HEAD
   width: 90% !important;
   margin: auto !important; 
+=======
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
 }
 
 

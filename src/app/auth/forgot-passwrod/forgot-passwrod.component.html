@@ -26,12 +26,18 @@
                             <!-- <div class="form-control-position">
                             <i class="feather ft-user"></i>
                         </div> -->
+<<<<<<< HEAD
                             <div style="text-align: left;"     *ngIf="submitted && f.username.errors" class="invalid-feedback">
                                 <div *ngIf="f.username.errors.required">username is Required</div>
                             </div>
                             <div class="login">
                                     <a [routerLink]="['/login']" class="card-link">Login Here!</a>
                                 </div>
+=======
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">username is Required</div>
+                            </div>
+>>>>>>> 6d546429cbcdc6cd68288aa7c60635edfbdcf19c
                             <button type="submit" class="custbtn mt-2">
                                 <!-- <i class="fa fa-refresh fa-spin" *ngIf="submitted"></i> -->
                                 <!-- <i class="feather ft-unlock" *ngIf="!submitted"></i>  -->
