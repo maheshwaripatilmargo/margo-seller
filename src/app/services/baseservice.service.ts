@@ -12,7 +12,7 @@ public baseUrl1;
     if(window.location.hostname == "localhost"){
       console.log('lcal');
       // this.baseUrl1 = 'http://ade48db0.ngrok.io/';
-      this.baseUrl1 = 'http://192.168.100.111:8082/';
+      this.baseUrl1 = 'http://192.168.100.74:8082/';
     }else{
       this.baseUrl1 = 'https://margo-dev-team.herokuapp.com/';
     }

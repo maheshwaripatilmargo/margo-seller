@@ -1,3 +1,4 @@
+
 <div class="container">
 <div class="row">
   <div class="col-md-8">
@@ -33,12 +34,11 @@
 <div class="card">
   <div class="card-body">
     <div class="row">
-      <div class="col-md-3">
-        <ul>
-        <li>Lorem ipsum dolor sit amet consectetur .</li>
-        <li>Lorem ipsum dolor sit amet consectetur .</li>
-        <a href="" style="float: right;">Read More</a>
-      </ul></div>
+      <div class="col-md-3"> 
+        <ul *ngFor="let i of msg" style="padding-inline-start:3px !important">
+          <li style="list-style:none;">{{i.get_fb_msg_snip_fun.msg_description}}</li>
+        </ul> 
+    </div>
       <div class="col-md-3"><img src="../../../../assets/custom/fbimages/imgone.png" height="60px" width="60px">
         <img src="../../../../assets/custom/fbimages/imgtwo.png" height="60px" width="60px" class="ml-1"></div>
       <div class="col-md-3">15 Minute</div>

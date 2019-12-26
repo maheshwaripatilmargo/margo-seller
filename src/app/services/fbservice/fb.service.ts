@@ -14,8 +14,8 @@ export class FbService {
   constructor(private http: HttpClient, public baseService: BaseserviceService) {
     this.baseUrl = baseService.baseUrl1 + 'api/fb/';
   }
-  
-  addingFbUsers(value,token){    
+
+  addingFbUsers(value, token) {
     var body = value;
     let httpOptions = this.httpHeadersOptions()
     if (token) {
@@ -26,35 +26,79 @@ export class FbService {
   }
 
 
-  getCampaign() {
+
+
+  // getCampaign() {
+  //   var body = {};
+  //   return this.http.get<any>(this.baseUrl + "campaign/100/0", this.httpHeadersOptions())
+  //     .pipe(catchError(this.handleError));
+  // }
+ 
+//using
+  getPostManagementData(catId) {
+    console.log("service", catId);
+
     var body = {};
-    return this.http.get<any>(this.baseUrl + "campaign/100/0", this.httpHeadersOptions())
+    return this.http.get<any>(this.baseUrl + `postByCategoryId/${catId}`, this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
   }
-  getPostManagementData() {
-    var body = {};
-    return this.http.get<any>(this.baseUrl + "post/100/0", this.httpHeadersOptions())
-      .pipe(catchError(this.handleError));
-  }
-  getCategoryData() {
+//using
+  // getPostImagetData(Id) {
+  //   console.log("service",Id);
+
+  //   var body = {};
+  //   return this.http.get<any>(this.baseUrl + `postByCategoryId/${Id}`, this.httpHeadersOptions())
+  //     .pipe(catchError(this.handleError));
+  // }
+//useing
+ getCategoryData() {
     var body = {};
     return this.http.get<any>(this.baseUrl + "postCategory/100/0", this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
   }
 
- getMessageData() {
-    var body = {};
-    return this.http.get<any>(this.baseUrl + "message/100/0", this.httpHeadersOptions())
+
+
+  getCustomMessage(Id) {
+ var body = {};
+    return this.http.get<any>(this.baseUrl + `message/10/0`, this.httpHeadersOptions())
       .pipe(catchError(this.handleError));
   }
 
+  getCustomData(Id) {
+   var body = {};
+    return this.http.get<any>(this.baseUrl + `post/${Id}`, this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
+  }
+  getCustomimages(data){
+    var body = {};
+    return this.http.get<any>(this.baseUrl + `post/${data}`, this.httpHeadersOptions())
+      .pipe(catchError(this.handleError));
 
-  
+  }
+ 
+
+//mid m-tpe m-desc isactive
+  // getMessageData() {
+  //   var body = {};
+  //   return this.http.get<any>(this.baseUrl + "message/100/0", this.httpHeadersOptions())
+  //     .pipe(catchError(this.handleError));
+  // }
+
+  //containe pid cid campid pname ddescription
+  // getPostManagementDataa() {
+  //   var body = {};
+  //   return this.http.get<any>(this.baseUrl + "post/100/0", this.httpHeadersOptions())
+  //     .pipe(catchError(this.handleError));
+  // }
 
 
 
 
-   private httpHeadersOptions() {
+
+
+
+  private httpHeadersOptions() {
     return this.baseService.httpHeadersOptions();
   }
   //tohandle the error
