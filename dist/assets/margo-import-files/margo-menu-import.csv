@@ -1,0 +1,5 @@
+menu_parent_id,menu_type,menu_name,menu_description,menu_icon,menu_link,menu_link_type,isactive
+1,type,menu,descr,icon,link,link,TRUE
+3,Admin,Anil,Admin,k,a,b,TRUE
+1,,,,,,,TRUE
+2,Kumar,Anil,Kumar,abc.jpeg,abc.jpeg,b,TRUE
