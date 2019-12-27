@@ -7,15 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./socialpost.component.css']
 })
 export class SocialpostComponent implements OnInit {
-
+  public postValue:String = 'first';
   constructor(public router:Router) { }
 
   ngOnInit() {
+   
+  
   }
 
-  // onChangeEvent(){
-  //   console.log("ïn fun");
-    
-  //   this.router.navigateByUrl("business/eventhost")
-  // }
+  checkPosting(val){
+    console.log("radioTwoWorking:",val);
+    this.postValue = val;
+  }
+  
 }

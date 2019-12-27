@@ -23,6 +23,7 @@ export class FacebookpostComponent implements OnInit {
   selectedid;
   getCatAction: any = [];
   catPostObj = [];
+  
   ngOnInit() {
     this.getcat(0);
     console.log(this.getcatObj);
@@ -82,6 +83,9 @@ export class FacebookpostComponent implements OnInit {
     console.log("working",id);
   this.router.navigate(['/directseller/customfbpost'], {queryParams: {post_id:id } });
    }
+
+
+  
 
 
 

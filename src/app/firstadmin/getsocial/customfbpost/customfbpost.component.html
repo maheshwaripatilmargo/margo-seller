@@ -1,111 +1,121 @@
-
-
 <div class="container">
-
-<div class="row">
-  
-     <h3>Customize Your Facebook Post</h3>
-  
-</div>
-<div class="row">
-  <div class="col-md-6">
-      <div class="row"> 
-      <div class="col-md-6"><img src={{post_screenshot}}></div>
-      <div class="col-md-6">
-        <h3>{{post_name}}</h3>
-       <div><a href="">click imagesto</a></div>
-       <div><a href="">View Post</a></div>
-      </div></div>
-
-      <div class="row mt-2">
-          <div class="col-md-12"><h4>Message
-          <a href="" style="float: right;"><i class='fas fa-comment-alt info'></i>Add Message Snippet</a> </h4></div>
-          </div>
-          <div class="row mt-1">
-            <div class="card" style="width: 100%;">
-            <textarea name="" id=""  rows="5"></textarea>
-          </div>  
-       </div>
-    
-          
-              <div class="form-group">
-                  <label for="sel1"><h4>Persnalization Field</h4></label>
-                  <select class="form-control" id="sel1" name="sellist1">
-                    <option>  your event shopping link </option>
-                    <option>your host forst name</option>
-                    <option>your business name</option>
-                    <option>your full name</option>
-                    <option>your first name</option>
-                    <option>event start date</option>
-                    <option>event start time</option>
-                    <option>event time zone</option>
-                  
-                  </select>
-         </div>
-          
-
-          <div class="form-group">
-              <label for="sel1"><h4>Posted Url:</h4></label>
-              <select class="form-control" id="sel1" name="sellist1">
-               
-                <option>Website Link</option>
-                <option>Album Link</option>
-                <option>Video Link</option>
-                
-              
-              </select>
-     </div>
-
-     <div class="row">
-       <div class="col-md-12">
-         <label for="Addimages" style="font-size: 18px;">Add new images</label>
-        <input type="file"  id="Addimages" name="Add more image"></div>
-       </div>
-       <div class="row">
-          <div class="col-md-6"><img src="/assets/custom/fbimages/imgfour.png" style="height: 200px;"></div>
-          <div class="col-md-6"><img src="/assets/custom/fbimages/imgfive.png" style="height: 200px;"></div>
-
-          </div>
-          <div class="row">
-              <div class="col-md-6"><img src="/assets/custom/fbimages/imgtwo.png" style="height: 200px;"></div>
-              <div class="col-md-6"><button class="btn btn-info">Canva</button></div>
-    
-              </div>
-
-              <div class="form-group mt-1">
-                  <h4><label for="sel1">Sava To Library </label> <a href="" style="float: right;">Edit Category</a></h4>
-                  <select class="form-control" id="sel1" name="sellist1">
-                   
-                    <option>Website Link</option>
-                    <option>Album Link</option>
-                    <option>Video Link</option>
-                    
-                  
-                  </select>
-         </div>
-
-         <button class="btn btn-info mx-auto d-block">Schedule</button>
-    
-
+  <div class="row">
+    <h3>Customize Your Facebook Post</h3>
   </div>
-  <div class="col-md-1"></div>
-  <div class="col-md-3">
-    <div class="card overflow-auto p-1" style="height:350px">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6"><img src={{post_screenshot}}></div>
+        <div class="col-md-6">
+          <h3>{{post_name}}</h3>
+          <div><a href="">click imagesto</a></div>
+          <div><a href="">View Post</a></div>
+        </div>
+      </div>
+      <form>
+        <div class="form-group">
+          <button type="button" class="btn btn-link btn-lg"> Message</button>
+          <button type="reset" class="btn btn-link btn-lg float-right">Clear Message</button>
+          <textarea class="form-control" rows="5" id="comment" name="text">{{data}}</textarea>
+        </div>
+      </form>
+
+      <div class="form-group">
+        <label for="sel1">
+          <h4>Persnalization Field</h4>
+        </label>
+        <select class="form-control" id="sel1" name="sellist1">
+          <option> your event shopping link </option>
+          <option>your host forst name</option>
+          <option>your business name</option>
+          <option>your full name</option>
+          <option>your first name</option>
+          <option>event start date</option>
+          <option>event start time</option>
+          <option>event time zone</option>
+
+        </select>
+      </div>
+<div class="form-group">
+        <label for="sel1">
+          <h4>Posted Url:</h4>
+        </label>
+        <div id="sel1">{{post_Url}}</div>
+      </div>
+
+      <h4>Add new images :</h4>
+      <span style="color:red;" *ngIf="message">{{message}}</span>
+      <input #file type="file" accept='image/*' (change)="preview(file.files)" multiple />
      
-    <h2>Message snippet</h2>
-    <a href=""> Message snippet</a>
-    <h3><a href="">Greetings</a></h3>
-    <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
-      <li style="list-style:none;">{{msg.get_fb_msg_snip_fun.msg_description}}</li>
-    </ul>
-    <h3><a href="">Invite</a></h3>
-    <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
-      <li style="list-style: none;">{{msg.get_fb_msg_snip_fun.msg_description}}</li>
-    </ul>
-  
+
+
+      <div class="row mt-1 mb-1">
+        <div class="col-md-6"> <img [src]="imgURL" height="200" width="200" *ngIf="imgURL"></div>
+        <div class="col-md-6"></div>
+      </div>
+
+      <a class="btn btn-info" href="https://www.canva.com/"  target="_blank" (click)="canvaPost()">Canva</a>
+
+
+
+      <div class="row mt-1 mb-1">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"></div>
+      </div>
+
+
+      <div class="form-group mt-1">
+        <h4><label for="sel1">Sava To Library </label> <a href="" style="float: right;">Edit Category</a></h4>
+        <select class="form-control" id="sel1" name="sellist1">
+
+          <option>Website Link</option>
+          <option>Album Link</option>
+          <option>Video Link</option>
+
+
+        </select>
+      </div>
+
+      <button class="btn btn-info mx-auto d-block">Schedule</button>
+
+
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <div class="card overflow-auto p-1" style="height:350px">
+        <h2>Message snippet</h2>
+        <a href=""> Message snippet</a>
+        <h3><a href="">Greetings</a></h3>
+        <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
+          <li style="list-style:none;" >
+            <div (click)="dispayData(msg.get_fb_msg_snip_fun.msg_description)">
+              {{msg.get_fb_msg_snip_fun.msg_description}}
+            </div>
+          </li>
+        </ul>
+        <h3><a href="">Invite</a></h3>
+    </div>
+    </div>
+    <div class="col-md-2"></div>
   </div>
-  </div>
-  <div class="col-md-2"></div>
 </div>
 
-</div>
+<!-- <ul *ngFor="let msg of msgVal" style="padding-inline-start:3px !important">
+  <li style="list-style:none;">
+    <div (click)="dispayData(msg.get_fb_msg_snip_fun.msg_description)">
+      {{msg.get_fb_msg_snip_fun.msg_description}}</div>
+  </li>
+</ul>
+
+<input type="text" name="name" id="name" [(ngmodel)="name"]>
+<textarea class="form-control" rows="5" id="comment" name="text">{{data}}</textarea> -->
+
+
+
+
+
+
+
+
+
+

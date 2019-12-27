@@ -16,6 +16,8 @@ export class CustomfbpostComponent implements OnInit {
   status=true;
   postValue:any;
   msgVal:any;
+  data:string;
+  imgFiles:any;
  
 
   constructor( private activatedRoute: ActivatedRoute,private fbservice: FbService) { }
@@ -67,12 +69,55 @@ export class CustomfbpostComponent implements OnInit {
     this.post_name = this.postValue.post_name;
     this.category_id = this.postValue.category_id;
     this. post_id = this.postValue.post_id;
-    console.log(this.post_id);
-    this.post_Url = this.postValue.post_Url;
     
+    this.post_Url = this.postValue.post_url;
     
+    console.log("hii",this.postValue.post_url);
     this.post_screenshot = this.postValue.post_screenshot;
     console.log(this.post_screenshot);
   }
 
+  dispayData(x){
+    console.log("hiii");  
+    this.data=x;
+  }
+  deleteMessage(x){
+    console.log("hiii");
+    
+
+  }
+
+  public imagePath;
+  imgURL: any=[];
+  public message: string;
+ 
+  preview(files) {
+    console.log("img",files);
+    this.imgFiles=files;
+    if (files.length === 0)
+      return;
+ 
+    var mimeType = files[0].type;
+    console.log("img",mimeType);
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+ 
+    var reader = new FileReader();
+    this.imagePath = files;
+    console.log("img", this.imagePath);
+
+    reader.readAsDataURL(files[0]); 
+    reader.onload = (_event) => { 
+      this.imgURL = reader.result; 
+    }
+    
+  }
+
+  canvaPost(){
+  console.log("canva working");
+
+  }
+ 
 }
